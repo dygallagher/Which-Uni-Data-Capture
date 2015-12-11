@@ -1,0 +1,105 @@
+@font-face {
+font-family: StagSansLight;
+src: url('StagSans-Light.otf') format("opentype");
+}
+@font-face {
+font-family: StagSansLightHeader;
+src: url('StagSans-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansMedium;
+  src: url('StagSans-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansMediumItalic;
+  src: url('StagSans-MediumItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansLightItalic;
+  src: url('StagSans-LightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: StagSansBook;
+  src: url('StagSans-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansBookItalic;
+  src: url('StagSans-BookItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: StagSansBlack;
+  src: url('StagSans-Black.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansBlackItalic;
+  src: url('StagSans-BlackItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansBold;
+  src: url('StagSans-Bold.otf') format('opentype'), url('StagSans-Semibold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansBoldItalic;
+  src: url('StagSans-BoldItalic.otf') format('opentype'), url('StagSans-Semibold.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: StagSansThin;
+  src: url('StagSans-Thin.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSerifBook;
+  src: url('Stag-Medium.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansSemibold;
+  src: url('StagSans-Semibold.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: StagSansSemiboldItalic;
+  src: url('StagSans-SemiboldItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: StagBook;
+  src: url('Stag-Book.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: WhichIcons;
+  src: url('WhichIcons.eot'); /* IE9 Compat Modes */
+  src: url('WhichIcons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WhichIcons.woff') format('woff'), /* Modern Browsers */
+       url('WhichIcons.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('WhichIcons.svg#0b84e117e18fdd4d2fcbc8b8f1dd2e55') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}

@@ -1,0 +1,1942 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"46144c735a","applicationID":"694359","transactionName":"IgxeTEQLX19RExYDBhcKU11FS0BbWxY=","queueTime":4,"applicationTime":388,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMGVVBUGwUJUFJXDg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+
+	<link rel="icon" type="image/png" href="/favicon.png?v=2" />
+  <title>10 things to put in your personal statement - Which? University</title><META NAME="Description" CONTENT="What is a personal statement and how do you make yours stand out? Here are 10 tips to impress an admissions tutor when writing your personal statement..." /><META NAME="Keywords" CONTENT="Personal statements,UCAS application" /><link rel="canonical" href="http://university.which.co.uk/advice/personal-statements/10-things-to-put-in-your-personal-statement">
+<META NAME="google-site-verification" content="VMg6Z1Nkesjiz8P8uxODS_dz2KEHOEbcyjjq5lsAsxE" /><meta property="og:title" content="10 things to put in your personal statement - Which? University" /><meta property="og:url" content="http://university.which.co.uk/advice/personal-statements/10-things-to-put-in-your-personal-statement" /><meta property="og:image" content="http://dtmw9u23bb9ya.cloudfront.net/assets/Which_uni_200px-b576319b11ecca331ce3134493924d47.png" /><meta property="og:description" content="What is a personal statement and how do you make yours stand out? Here are 10 tips to impress an admissions tutor when writing your personal statement..." /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@whichuniuk" /><meta name="twitter:image" content="http://dtmw9u23bb9ya.cloudfront.net/assets/Which_uni_4-3-8f91203e88d6678eca8a491713342a0a.png" />
+  <!--[if IE ]>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/ie-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <![endif]-->
+  <!--[if IE 9]>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/ie9-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/lt-ie9-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/lt-ie8-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <![endif]-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/application-c878a04b14daa554e5a8e07dd0455d7d.css" />
+  <link href="//wca-assets-which-prod-euwest1.s3.amazonaws.com/fragment/prod/application-f2fa9f333ebc607008255f21e7dc58b6.css" media="all" rel="stylesheet" />
+  <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/application-7d6989217a95f6833d23c135dbb640a3.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/search.ie8-1dca37b14fc3a0622aa5221c732437bf.js"></script>
+    <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/html5shiv-printshiv-2e361ea6d6a3d1550edde697c5c01fa1.js"></script>
+  <![endif]-->
+  <noscript>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/stylesheets/nojs.css" />
+  </noscript>
+
+  
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="TklaKEyJ66iFPdODyEo1FkYHoaNogP1HdDziuMSWwdq/57OBPBp9V2wjLiIzpYZlVIqoOyo3kmA050HQ7SH7bA==" />
+  <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+ <!-- begin analytics --> 
+<script>
+//<![CDATA[
+window.universal_variable = {
+  "page": "advices.show",
+  "advice": {
+    "id": 418,
+    "name": "10 things to put in your personal statement"
+  }
+};
+dataLayer = window.dataLayer || [];
+//]]>
+</script> 
+      
+        <script type="text/javascript">
+          dataLayer.push({'loggedInWhichUser':'false'});
+          dataLayer.push({
+  "contentGroup": "Advice pages"
+});
+dataLayer.push({
+  "scrollTrack": "finite"
+});
+
+        </script>
+      
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new
+      Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+      ;})(window,document,'script','dataLayer','GTM-MP2QW9');</script>
+      
+    
+ <!-- end analytics --> 
+
+  <meta name="msvalidate.01" content="3F6CB605329BC8ECE3A112C34EA9C4F8" />
+  <script src="//wca-assets-which-prod-euwest1.s3.amazonaws.com/fragment/prod/application-df022f185aa500c0cd40488a9ce719e4.js"></script>
+</head>
+<body class="advice-body show-body no-js">
+  <script>(function(e,t){e.className=e.className.replace("no-js",t)})(document.body,"js")</script>
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MP2QW9" height="0" width="0" style="display:none;visibility:hidden;"></iframe></noscript>
+    <!-- Eprivacy start -->
+<div id="eprivacy" class="eprivacy banner group">
+  <div class="eprivacy-container">
+    <div class="left-column">
+      <p><strong>Which?</strong> uses cookies to make our websites and services work better for you, and by continuing you accept this.&nbsp;<a href="http://www.which.co.uk/privacy-policy/cookie-policy/" title="Learn about what cookies we use and how to control them">Find&nbsp;out&nbsp;more&nbsp;about&nbsp;cookies.</a></p>
+    </div>
+    <div class="right-column">
+      <p>
+        <a href="#" class="button button-simple primary" id="eprivacy-submit" aria-label="Accept cookie policy">OK</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Eprivacy end -->
+
+<!--[if IE ]>
+<div id="ie-compatibility-message">
+  <div class="grid">It looks like you're using an older version of Internet Explorer, so unfortunately things might not be displaying as they should. To get the most out of the Which? University website, please upgrade your internet browser or install an alternative free browser such as <a href="https://support.google.com/chrome/answer/95346?hl=en-GB">Google Chrome</a> or <a href="https://www.mozilla.org/en-GB/firefox/new/">Mozilla Firefox</a>.
+</div>
+</div>
+<![endif]-->
+<div class="global-nav" role="banner">
+  <div class="nav-bar">
+    <a href="http://www.which.co.uk" rel="home" title="Which? homepage" class="button logo-button sub">
+      <span class="a11y">Which? homepage</span>
+    </a>
+    <nav role="navigation" aria-label="Global Navigation">
+      <ul class="quicklinks">
+
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d0" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label no-border">Product Reviews<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
+
+          <div class="mega-dropdown" id="d0" tabindex="-1">
+            <section class="global-nav-menu">
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item is-1-column is-popular-products">
+                      <h2 class="global-nav-menu__category-name">Popular products</h2>
+                      <ul class="global-nav-menu__product-list">
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/boilers" class="global-nav-menu__product-link is-popular">Boilers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/dishwashers" class="global-nav-menu__product-link is-popular">Dishwashers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/home-and-garden/home-appliances/reviews/freestanding-cookers/" class="global-nav-menu__product-link is-popular">Freestanding cookers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/home-and-garden/home-appliances/reviews/fridge-freezers/" class="global-nav-menu__product-link is-popular">Fridge freezers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/laptops" class="global-nav-menu__product-link is-popular">Laptops</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/mobile-phones" class="global-nav-menu__product-link is-popular">Mobile phones</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/printers-and-ink" class="global-nav-menu__product-link is-popular">Printers &amp; Ink</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/televisions" class="global-nav-menu__product-link is-popular">Televisions</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/tumble-dryers" class="global-nav-menu__product-link is-popular">Tumble dryers</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/vacuum-cleaners" class="global-nav-menu__product-link is-popular">Vacuum cleaners</a>
+                          </li>
+                          <li class="global-nav-menu__product-list-item">
+                            <a href="http://www.which.co.uk/reviews/washing-machines" class="global-nav-menu__product-link is-popular">Washing machines</a>
+                          </li>
+                      </ul>
+                          <ul class="global-nav-menu__additional-links">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/news/" class="global-nav-menu__product-link is-additional-link">Latest news from Which?</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/videos/" class="global-nav-menu__product-link is-additional-link">Latest videos from Which?</a>
+                              </li>
+                          </ul>
+                    </li>
+                    <li class="global-nav-menu__category-list-item
+                          is-3-columns
+                          ">
+                      <h2 class="global-nav-menu__category-name">Product categories</h2>
+                      <ul class="global-nav-menu__subcategory-list extra-bottom-padding">
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/technology/" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#3972B4">&#57351;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Technology</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/tv-and-home-entertainment" class="global-nav-menu__product-link">TV &amp; home entertainment</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/computing" class="global-nav-menu__product-link">Computing</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/cameras" class="global-nav-menu__product-link">Cameras</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/phones" class="global-nav-menu__product-link">Phones</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/audio" class="global-nav-menu__product-link">Audio</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/technology/broadband-tv-and-phone/" class="global-nav-menu__product-link">Broadband, TV &amp; phone </a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/car-technology" class="global-nav-menu__product-link">Car technology</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/wearable-technology" class="global-nav-menu__product-link">Wearable technology</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://blogs.which.co.uk/technology/" class="global-nav-menu__product-link">Tech Daily</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/money/" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#40969a">&#57353;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Money</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/savings-and-investments/" class="global-nav-menu__product-link">Savings &amp; investments</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/credit-cards-and-loans/" class="global-nav-menu__product-link">Credit cards &amp; loans</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/retirement/" class="global-nav-menu__product-link">Retirement</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/money-saving-tips/" class="global-nav-menu__product-link">Money-saving tips</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/insurance/" class="global-nav-menu__product-link">Insurance</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/mortgages-and-property/" class="global-nav-menu__product-link">Mortgages &amp; property</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/bank-accounts/" class="global-nav-menu__product-link">Bank accounts</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/money/tax/" class="global-nav-menu__product-link">Tax</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://money.which.co.uk/tax-calculator" class="global-nav-menu__product-link">Tax calculator</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/home-and-garden/" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#ee5a40">&#57350;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Home &amp; Garden</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/home-appliances" class="global-nav-menu__product-link">Home appliances</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/small-appliances" class="global-nav-menu__product-link">Small appliances</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/heating-water-and-electricity" class="global-nav-menu__product-link">Heating, water &amp; electricity</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/l/shopping-grooming-and-wellbeing" class="global-nav-menu__product-link">Shopping, grooming &amp; wellbeing</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/garden/" class="global-nav-menu__product-link">Garden</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/home-improvements/" class="global-nav-menu__product-link">Home improvement</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/travel-and-leisure/" class="global-nav-menu__product-link">Travel &amp; Leisure</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://local.which.co.uk/" class="global-nav-menu__product-link">Which? Local</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/home-and-garden/staying-independent-at-home/" class="global-nav-menu__product-link">Staying independent at home</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/cars/" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#54626c">&#57360;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Cars</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/reviews/" class="global-nav-menu__product-link">Car reviews</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/driving" class="global-nav-menu__product-link">Driving your car</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/choosing-a-car/" class="global-nav-menu__product-link">Choosing a car</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/cars/survey" class="global-nav-menu__product-link">Car survey</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/baby-and-child/" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#7963a8">&#57361;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Baby &amp; Child</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/baby-transport/" class="global-nav-menu__product-link">Baby transport</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/nursery-and-feeding/" class="global-nav-menu__product-link">Nursery &amp; feeding</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/child-safety-at-home/" class="global-nav-menu__product-link">Child safety at home</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/baby-and-child/shopping-and-family-finances/" class="global-nav-menu__product-link">Shopping &amp; family finances</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                              <a href="http://www.which.co.uk/energy/" class="global-nav-menu__subcategory-link is-product">
+                                  <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#8cc04b">&#57362;</span>
+                                <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                                  Energy</h3>
+                              </a>
+                              <p class="global-nav-menu__subcategory-desc"></p>
+                              <ul class="global-nav-menu__product-list">
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/energy/saving-money/" class="global-nav-menu__product-link">Saving money</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/energy/energy-saving-products/" class="global-nav-menu__product-link">Energy saving products</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://www.which.co.uk/energy/creating-an-energy-saving-home/" class="global-nav-menu__product-link">Creating an energy saving home</a>
+                                  </li>
+                                  <li class="global-nav-menu__product-list-item">
+                                    <a href="http://switch.which.co.uk/" class="global-nav-menu__product-link">Compare energy prices</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
+
+
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d1" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label ">Campaigns<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
+
+          <div class="mega-dropdown" id="d1" tabindex="-1">
+            <section class="global-nav-menu">
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item
+                          is-4-columns
+                          has-single-subcategory">
+                      <h2 class="global-nav-menu__category-name">Which? campaigns</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">All campaigns</h3>
+                                <p class="global-nav-menu__subcategory-desc">Get involved in our latest campaigns and find out how to take action.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/better-pensions/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Better Pensions</h3>
+                                <p class="global-nav-menu__subcategory-desc">New rules mean more choice as you approach retirement. Join our call for better pensions.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/fair-energy-prices/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Fair energy prices</h3>
+                                <p class="global-nav-menu__subcategory-desc">Do you think you pay a fair price for your energy? If in doubt, sign our petition.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/misleading-supermarket-pricing/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Misleading prices</h3>
+                                <p class="global-nav-menu__subcategory-desc">Fed up with pricing tricks that exaggerate discounts and manipulate shoppers? Sign our petition to end misleading pricing.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/car-fuel-tests-trust/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Fuel claims</h3>
+                                <p class="global-nav-menu__subcategory-desc">Car makers are claiming fuel figures that are miles from the truth. Sign our petition for car tests you can trust.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/nuisance-calls-and-texts/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Nuisance calls and texts</h3>
+                                <p class="global-nav-menu__subcategory-desc">Plagued by nuisance calls and texts? Use our tool to report the culprits.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/broadband-speed-service/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Broadband speed</h3>
+                                <p class="global-nav-menu__subcategory-desc">We&#39;re calling on broadband providers to improve service and make speed guaranteed.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/schools-doctors-hospitals/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Public service complaints</h3>
+                                <p class="global-nav-menu__subcategory-desc">Ever feel like your complaints to GPs or care homes are being ignored?</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/campaigns/insurance-bank-card-fees/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Sneaky fees</h3>
+                                <p class="global-nav-menu__subcategory-desc">Do you feel tricked by sneaky fees and charges? Sign our petition and help us put a stop to the practice.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/consumer-rights" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                                <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="https://conversation.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Conversation</h3>
+                                <p class="global-nav-menu__subcategory-desc">A community website to share your views on the consumer issues of the day.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
+
+
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d2" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label ">Our Services<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
+
+          <div class="mega-dropdown" id="d2" tabindex="-1">
+            <section class="global-nav-menu">
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item
+                          is-1-column
+                          ">
+                      <h2 class="global-nav-menu__category-name">Consumer advice</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/consumer-rights" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                                <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://university.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? University</h3>
+                                <p class="global-nav-menu__subcategory-desc">Our free tool helps you choose what to study, where to go and how to get there.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/birth-choice" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Birth Choice</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find and compare local maternity services with our free service to help you choose where to give birth.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/elderly-care" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Elderly Care</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find free, independent and practical advice about caring for older people across the UK.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="global-nav-menu__category-list-item
+                          is-2-columns
+                          ">
+                      <h2 class="global-nav-menu__category-name">Which? services</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://trustedtraders.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Trusted Traders</h3>
+                                <p class="global-nav-menu__subcategory-desc">An endorsement scheme helping consumers find reputable traders in the home improvement and motoring sectors.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://wills.which.co.uk/whichwills/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Wills</h3>
+                                <p class="global-nav-menu__subcategory-desc">Writing an online will with Which? Wills is an easy, affordable and efficient solution.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="https://mortgageadvisers.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Mortgage Advisers</h3>
+                                <p class="global-nav-menu__subcategory-desc">Our impartial advisers look at every mortgage from every available lender to help you find the right mortgage.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://switch.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Switch</h3>
+                                <p class="global-nav-menu__subcategory-desc">Save money by comparing and switching your gas and electricity supplier using our free independent service.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://legalservice.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Legal</h3>
+                                <p class="global-nav-menu__subcategory-desc">Subscribe to Which? Legal to get simple and affordable legal advice from our expert lawyers.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://moneycompare.which.co.uk" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Money Compare</h3>
+                                <p class="global-nav-menu__subcategory-desc">Compare credit cards, mortgages, savings and ISAs with the Which? Money comparison site.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="global-nav-menu__category-list-item
+                          is-1-column
+                          ">
+                      <h2 class="global-nav-menu__category-name">Member exclusive</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://local.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Local</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find reliable traders from thousands of local business reviews by Which? members across the UK.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/what-we-offer/which-money-helpline/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Money helpline</h3>
+                                <p class="global-nav-menu__subcategory-desc">Expert, unbiased information and guidance to help our members make the best financial decisions.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="https://cwhelpdesk.which.co.uk/hc/en-us/requests/new" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Computing helpdesk</h3>
+                                <p class="global-nav-menu__subcategory-desc">Jargon-free technical support and buying advice to help make sense of our members&#39; computing issues.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
+
+
+        <li>
+          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d3" aria-expanded="false">
+            <div class="button quicklink-button switch-a">
+              <div class="button-label ">About us<span class="more-less icon-more"></span>
+              </div>
+            </div>
+          </a>
+
+          <div class="mega-dropdown" id="d3" tabindex="-1">
+            <section class="global-nav-menu">
+              <div class="global-nav-menu__accordion-body">
+                <ul class="global-nav-menu__category-list">
+                    <li class="global-nav-menu__category-list-item
+                          is-4-columns
+                          has-single-subcategory">
+                      <h2 class="global-nav-menu__category-name">About us</h2>
+                      <ul class="global-nav-menu__subcategory-list">
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">About Which?</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out more about what we do and how we work, including the Which? Council.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/what-we-offer/what-do-i-get-when-i-take-a-trial/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Become a member</h3>
+                                <p class="global-nav-menu__subcategory-desc">Discover the benefits of Which?. Find out more about what your subscription includes and take a trial.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/about-which/contact-us/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Contact us</h3>
+                                <p class="global-nav-menu__subcategory-desc">Whether you&#39;re new to us or a longstanding member, there are several ways to get in touch.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/help/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Help</h3>
+                                <p class="global-nav-menu__subcategory-desc">FAQs on subjects including using which.co.uk and accessing your account.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://press.which.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Press office</h3>
+                                <p class="global-nav-menu__subcategory-desc">Latest news releases and statements, information on spokespeople and contacts for journalists.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://careersatwhich.co.uk/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Careers</h3>
+                                <p class="global-nav-menu__subcategory-desc">Find out more about working at Which? including latest vacancies and how to apply.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/sitemap/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? Directory</h3>
+                                <p class="global-nav-menu__subcategory-desc">Can&#39;t find what you&#39;re looking for? Access the complete A-Z directory of Which? Sites.</p>
+                              </a>
+                          </li>
+                          <li class="global-nav-menu__subcategory-list-item">
+                              <a href="http://www.which.co.uk/news/" class="global-nav-menu__subcategory-link">
+                                <h3 class="global-nav-menu__subcategory-name">Which? News</h3>
+                                <p class="global-nav-menu__subcategory-desc">Get the latest news on our research and the consumer issues that affect you.</p>
+                              </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </li>
+
+      </ul>
+    </nav> 
+
+    <div class="nav-right">
+      <a id="menu-button" href="http://www.which.co.uk/sitemap" class="button show-menu switch-b">
+        <div class="button-label">
+          <span class="icon-list"></span>
+        </div>
+      </a>
+      <div class="search-container">
+        <a class="nav-links" href="http://search.which.co.uk/" aria-expanded="false" aria-controls="search-bar">
+          <div id="search-button" class="button show-search">
+            <div class="button-label">
+              <span class="icon-search"><span class="a11y">Search form</span></span>
+            </div>
+          </div>
+        </a>
+
+        <div class="search-bar mega-dropdown" id="search-bar">
+          <div class="search-inner">
+            <form method="get" action="http://search.which.co.uk/search" id="global-search">
+              <label for="sli_search_1" class="a11y">Search all of Which?</label>
+              <input type="text" class="search-box" name="w" value="" id="sli_search_1" placeholder="Search all of Which?" autocomplete="off">
+              <input type="hidden" name="asug" />
+              <input type="hidden" name="mainresult" value="mainresult:yes" />
+              <input type="hidden" name="intcmp" value="GNH-Search" />
+              <input type="submit" value="Search" class="search-button">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mobile-nav-container"></div>
+
+<script type="text/template" id="mobile-nav-template">
+
+  <div class="mobile-search">
+    <div class="search-bar">
+      <div class="search-inner">
+        <form method="get" action="http://search.which.co.uk/search" id="global-search">
+          <label for="sli_search_1" class="a11y">Search all of Which?</label>
+          <input type="text" class="search-box" name="w" value="" id="sli_search_1" placeholder="Search all of Which?" autocomplete="off">
+          <input type="hidden" name="asug" />
+          <input type="hidden" name="mainresult" value="mainresult:yes" />
+          <input type="hidden" name="intcmp" value="GNH-Search" />
+          <input type="submit" value="Search" class="search-button">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mobile-navigation" aria-label="Global Navigation">
+    <ul>
+      <li>
+
+        <h2 class="mobile-navigation__title">Product Reviews<span class="indicator icon-more"></span></h2>
+
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item is-1-column is-popular-products">
+                  <h2 class="global-nav-menu__category-name">Popular products</h2>
+                  <ul class="global-nav-menu__product-list">
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/boilers" class="global-nav-menu__product-link is-popular">Boilers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/dishwashers" class="global-nav-menu__product-link is-popular">Dishwashers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/home-and-garden/home-appliances/reviews/freestanding-cookers/" class="global-nav-menu__product-link is-popular">Freestanding cookers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/home-and-garden/home-appliances/reviews/fridge-freezers/" class="global-nav-menu__product-link is-popular">Fridge freezers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/laptops" class="global-nav-menu__product-link is-popular">Laptops</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/mobile-phones" class="global-nav-menu__product-link is-popular">Mobile phones</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/printers-and-ink" class="global-nav-menu__product-link is-popular">Printers &amp; Ink</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/televisions" class="global-nav-menu__product-link is-popular">Televisions</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/tumble-dryers" class="global-nav-menu__product-link is-popular">Tumble dryers</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/vacuum-cleaners" class="global-nav-menu__product-link is-popular">Vacuum cleaners</a>
+                      </li>
+                      <li class="global-nav-menu__product-list-item">
+                        <a href="http://www.which.co.uk/reviews/washing-machines" class="global-nav-menu__product-link is-popular">Washing machines</a>
+                      </li>
+                  </ul>
+                    <ul class="global-nav-menu__additional-links">
+                        <li class="global-nav-menu__product-list-item">
+                          <a href="http://www.which.co.uk/news/" class="global-nav-menu__product-link is-additional-link">Latest news from Which?</a>
+                        </li>
+                        <li class="global-nav-menu__product-list-item">
+                          <a href="http://www.which.co.uk/videos/" class="global-nav-menu__product-link is-additional-link">Latest videos from Which?</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="global-nav-menu__category-list-item
+                      is-3-columns
+                      ">
+                  <h2 class="global-nav-menu__category-name">Product categories</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/technology/" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#3972B4">&#57351;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Technology</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/tv-and-home-entertainment" class="global-nav-menu__product-link">TV &amp; home entertainment</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/computing" class="global-nav-menu__product-link">Computing</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/cameras" class="global-nav-menu__product-link">Cameras</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/phones" class="global-nav-menu__product-link">Phones</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/audio" class="global-nav-menu__product-link">Audio</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/technology/broadband-tv-and-phone/" class="global-nav-menu__product-link">Broadband, TV &amp; phone </a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/car-technology" class="global-nav-menu__product-link">Car technology</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/wearable-technology" class="global-nav-menu__product-link">Wearable technology</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://blogs.which.co.uk/technology/" class="global-nav-menu__product-link">Tech Daily</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/money/" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#40969a">&#57353;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Money</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/savings-and-investments/" class="global-nav-menu__product-link">Savings &amp; investments</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/credit-cards-and-loans/" class="global-nav-menu__product-link">Credit cards &amp; loans</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/retirement/" class="global-nav-menu__product-link">Retirement</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/money-saving-tips/" class="global-nav-menu__product-link">Money-saving tips</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/insurance/" class="global-nav-menu__product-link">Insurance</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/mortgages-and-property/" class="global-nav-menu__product-link">Mortgages &amp; property</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/bank-accounts/" class="global-nav-menu__product-link">Bank accounts</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/money/tax/" class="global-nav-menu__product-link">Tax</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://money.which.co.uk/tax-calculator" class="global-nav-menu__product-link">Tax calculator</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/home-and-garden/" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#ee5a40">&#57350;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Home &amp; Garden</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/home-appliances" class="global-nav-menu__product-link">Home appliances</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/small-appliances" class="global-nav-menu__product-link">Small appliances</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/heating-water-and-electricity" class="global-nav-menu__product-link">Heating, water &amp; electricity</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/l/shopping-grooming-and-wellbeing" class="global-nav-menu__product-link">Shopping, grooming &amp; wellbeing</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/garden/" class="global-nav-menu__product-link">Garden</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/home-improvements/" class="global-nav-menu__product-link">Home improvement</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/travel-and-leisure/" class="global-nav-menu__product-link">Travel &amp; Leisure</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://local.which.co.uk/" class="global-nav-menu__product-link">Which? Local</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/home-and-garden/staying-independent-at-home/" class="global-nav-menu__product-link">Staying independent at home</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/cars/" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#54626c">&#57360;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Cars</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/reviews/" class="global-nav-menu__product-link">Car reviews</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/driving" class="global-nav-menu__product-link">Driving your car</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/choosing-a-car/" class="global-nav-menu__product-link">Choosing a car</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/cars/survey" class="global-nav-menu__product-link">Car survey</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/baby-and-child/" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#7963a8">&#57361;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Baby &amp; Child</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/baby-transport/" class="global-nav-menu__product-link">Baby transport</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/nursery-and-feeding/" class="global-nav-menu__product-link">Nursery &amp; feeding</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/child-safety-at-home/" class="global-nav-menu__product-link">Child safety at home</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/baby-and-child/shopping-and-family-finances/" class="global-nav-menu__product-link">Shopping &amp; family finances</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item is-product-wrapper">
+                          <a href="http://www.which.co.uk/energy/" class="global-nav-menu__subcategory-link is-product">
+                              <span class="global-nav-menu__subcategory-icon icon" aria-hidden="true" style="background-color:#8cc04b">&#57362;</span>
+                            <h3 class="global-nav-menu__subcategory-name is-with-icon is-product">
+                              Energy</h3>
+                          </a>
+                          <p class="global-nav-menu__subcategory-desc"></p>
+                          <ul class="global-nav-menu__product-list">
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/energy/saving-money/" class="global-nav-menu__product-link">Saving money</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/energy/energy-saving-products/" class="global-nav-menu__product-link">Energy saving products</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://www.which.co.uk/energy/creating-an-energy-saving-home/" class="global-nav-menu__product-link">Creating an energy saving home</a>
+                              </li>
+                              <li class="global-nav-menu__product-list-item">
+                                <a href="http://switch.which.co.uk/" class="global-nav-menu__product-link">Compare energy prices</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+
+      </li>
+      <li>
+
+        <h2 class="mobile-navigation__title">Campaigns<span class="indicator icon-more"></span></h2>
+
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item
+                      is-4-columns
+                      has-single-subcategory">
+                  <h2 class="global-nav-menu__category-name">Which? campaigns</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">All campaigns</h3>
+                            <p class="global-nav-menu__subcategory-desc">Get involved in our latest campaigns and find out how to take action.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/better-pensions/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Better Pensions</h3>
+                            <p class="global-nav-menu__subcategory-desc">New rules mean more choice as you approach retirement. Join our call for better pensions.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/fair-energy-prices/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Fair energy prices</h3>
+                            <p class="global-nav-menu__subcategory-desc">Do you think you pay a fair price for your energy? If in doubt, sign our petition.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/misleading-supermarket-pricing/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Misleading prices</h3>
+                            <p class="global-nav-menu__subcategory-desc">Fed up with pricing tricks that exaggerate discounts and manipulate shoppers? Sign our petition to end misleading pricing.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/car-fuel-tests-trust/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Fuel claims</h3>
+                            <p class="global-nav-menu__subcategory-desc">Car makers are claiming fuel figures that are miles from the truth. Sign our petition for car tests you can trust.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/nuisance-calls-and-texts/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Nuisance calls and texts</h3>
+                            <p class="global-nav-menu__subcategory-desc">Plagued by nuisance calls and texts? Use our tool to report the culprits.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/broadband-speed-service/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Broadband speed</h3>
+                            <p class="global-nav-menu__subcategory-desc">We&#39;re calling on broadband providers to improve service and make speed guaranteed.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/schools-doctors-hospitals/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Public service complaints</h3>
+                            <p class="global-nav-menu__subcategory-desc">Ever feel like your complaints to GPs or care homes are being ignored?</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/campaigns/insurance-bank-card-fees/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Sneaky fees</h3>
+                            <p class="global-nav-menu__subcategory-desc">Do you feel tricked by sneaky fees and charges? Sign our petition and help us put a stop to the practice.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/consumer-rights" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                            <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="https://conversation.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Conversation</h3>
+                            <p class="global-nav-menu__subcategory-desc">A community website to share your views on the consumer issues of the day.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+
+      </li>
+      <li>
+
+        <h2 class="mobile-navigation__title">Our Services<span class="indicator icon-more"></span></h2>
+
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item
+                      is-1-column
+                      ">
+                  <h2 class="global-nav-menu__category-name">Consumer advice</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/consumer-rights" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Consumer rights</h3>
+                            <p class="global-nav-menu__subcategory-desc">An expert guide to your consumer rights with free tools and advice for what to do if things go wrong.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://university.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? University</h3>
+                            <p class="global-nav-menu__subcategory-desc">Our free tool helps you choose what to study, where to go and how to get there.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/birth-choice" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Birth Choice</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find and compare local maternity services with our free service to help you choose where to give birth.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/elderly-care" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Elderly Care</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find free, independent and practical advice about caring for older people across the UK.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="global-nav-menu__category-list-item
+                      is-2-columns
+                      ">
+                  <h2 class="global-nav-menu__category-name">Which? services</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://trustedtraders.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Trusted Traders</h3>
+                            <p class="global-nav-menu__subcategory-desc">An endorsement scheme helping consumers find reputable traders in the home improvement and motoring sectors.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://wills.which.co.uk/whichwills/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Wills</h3>
+                            <p class="global-nav-menu__subcategory-desc">Writing an online will with Which? Wills is an easy, affordable and efficient solution.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="https://mortgageadvisers.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Mortgage Advisers</h3>
+                            <p class="global-nav-menu__subcategory-desc">Our impartial advisers look at every mortgage from every available lender to help you find the right mortgage.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://switch.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Switch</h3>
+                            <p class="global-nav-menu__subcategory-desc">Save money by comparing and switching your gas and electricity supplier using our free independent service.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://legalservice.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Legal</h3>
+                            <p class="global-nav-menu__subcategory-desc">Subscribe to Which? Legal to get simple and affordable legal advice from our expert lawyers.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://moneycompare.which.co.uk" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Money Compare</h3>
+                            <p class="global-nav-menu__subcategory-desc">Compare credit cards, mortgages, savings and ISAs with the Which? Money comparison site.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="global-nav-menu__category-list-item
+                      is-1-column
+                      ">
+                  <h2 class="global-nav-menu__category-name">Member exclusive</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://local.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Local</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find reliable traders from thousands of local business reviews by Which? members across the UK.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/what-we-offer/which-money-helpline/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Money helpline</h3>
+                            <p class="global-nav-menu__subcategory-desc">Expert, unbiased information and guidance to help our members make the best financial decisions.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="https://cwhelpdesk.which.co.uk/hc/en-us/requests/new" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Computing helpdesk</h3>
+                            <p class="global-nav-menu__subcategory-desc">Jargon-free technical support and buying advice to help make sense of our members&#39; computing issues.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+
+      </li>
+      <li>
+
+        <h2 class="mobile-navigation__title">About us<span class="indicator icon-more"></span></h2>
+
+          <div class="global-nav-menu__accordion-body">
+            <ul class="global-nav-menu__category-list">
+                <li class="global-nav-menu__category-list-item
+                      is-4-columns
+                      has-single-subcategory">
+                  <h2 class="global-nav-menu__category-name">About us</h2>
+                  <ul class="global-nav-menu__subcategory-list">
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">About Which?</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out more about what we do and how we work, including the Which? Council.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/what-we-offer/what-do-i-get-when-i-take-a-trial/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Become a member</h3>
+                            <p class="global-nav-menu__subcategory-desc">Discover the benefits of Which?. Find out more about what your subscription includes and take a trial.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/who-we-are/which-policy/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Policy</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out about the policy which underpins the work we do to campaign for consumers.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/about-which/contact-us/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Contact us</h3>
+                            <p class="global-nav-menu__subcategory-desc">Whether you&#39;re new to us or a longstanding member, there are several ways to get in touch.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/help/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Help</h3>
+                            <p class="global-nav-menu__subcategory-desc">FAQs on subjects including using which.co.uk and accessing your account.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://press.which.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Press office</h3>
+                            <p class="global-nav-menu__subcategory-desc">Latest news releases and statements, information on spokespeople and contacts for journalists.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://careersatwhich.co.uk/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Careers</h3>
+                            <p class="global-nav-menu__subcategory-desc">Find out more about working at Which? including latest vacancies and how to apply.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/sitemap/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? Directory</h3>
+                            <p class="global-nav-menu__subcategory-desc">Can&#39;t find what you&#39;re looking for? Access the complete A-Z directory of Which? Sites.</p>
+                          </a>
+                      </li>
+                      <li class="global-nav-menu__subcategory-list-item">
+                          <a href="http://www.which.co.uk/news/" class="global-nav-menu__subcategory-link">
+                            <h3 class="global-nav-menu__subcategory-name">Which? News</h3>
+                            <p class="global-nav-menu__subcategory-desc">Get the latest news on our research and the consumer issues that affect you.</p>
+                          </a>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+
+      </li>
+    </ul>
+  </nav>
+</script>
+
+<!--   <ul class="navMin">
+    <li class="navSections">
+      <a class="button" href="#">Menu</a>
+    </li>
+    <li class="navSearch">
+      <a class="button" href="#">Search</a>
+    </li>
+    <li class="navComp">
+      <a class="shortlist-link-container button js-shortlist-link-container is-empty has-not-more-than-min has-not-min-exactly" data-labels-prefix="My shortlist" data-labels-suffix="course" id="comparisons_cta" href="/shortlist"><span class="comparisons_label_prefix">My shortlist</span> <span class="comparisons_count js-shortlisted-counter" data-linked-element="js-shortlist-link-container"></span> <span class="comparisons_label_suffix"></span></a>
+    </li>
+  </ul>
+ -->
+
+<div class="logo-row group">
+  <div class="wWrapper group">
+    <div class="nav-reset-group">
+      <div class="top-nav">
+        <div class="grid nav-container">
+          <div class="logo-holder">
+            <a href="/">
+              <img src="http://dtmw9u23bb9ya.cloudfront.net/assets/WhichLogo2Uni-bda7ebdb6627c359e22834746e7d3b36.png" alt="Whichlogo2uni" />
+</a>          </div>
+          <div class="navigation">
+            <div class="secondary-links">
+              <ul class="hamburglar js-hamburglar-control js-header-element-expand-control is-not-clicked" data-control-for=".main-primary-links" data-target-toggle-classes="is-unexploded is-exploded" data-toggle-classes="is-clicked is-not-clicked" data-control-family=".js-header-element-expand-control">
+                <li class="wrapper"><span class="hamburglar-icon icon-list"></span></li>
+              </ul>
+
+
+               <ul>
+                <li class="top-nav-item responsive-nav"></li>
+                 <li class="item-4 top-nav-item header-search-icon-container search-icon-visible" >
+                  <a href="" class="js-header-search-control js-header-element-expand-control is-not-clicked" data-control-for=".js-header-search-element" data-target-toggle-classes="is-hidden is-not-hidden" data-toggle-classes="is-clicked is-not-clicked" data-control-family=".js-header-element-expand-control"><span class="icon-search"></span></a>
+                  </li>
+                  <li class="item-5 top-nav-item" ><a class="shortlist-link-container button js-shortlist-link-container is-empty has-not-more-than-min has-not-min-exactly" data-labels-prefix="My shortlist" data-labels-suffix="course" id="comparisons_cta" href="/shortlist"><span class="comparisons_label_prefix">My shortlist</span> <span class="comparisons_count js-shortlisted-counter" data-linked-element="js-shortlist-link-container"></span> <span class="comparisons_label_suffix"></span></a></li>
+                </ul>
+            </div>
+            <ul class="main-primary-links is-unexploded">
+              <li class="item-0 top-nav-item " >
+              <a href="/courses">Find a course</a>
+              </li>
+              <li class="item-1 top-nav-item " >
+              <a href="/search/institution">University profiles</a>
+              </li>
+              <li class="item-2 top-nav-item current" >
+              <a href="/advice">Get advice</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header-search is-hidden js-header-search-element">
+  <div class="which-inner grid">
+      <form class="form_search formtastic c" novalidate="novalidate" action="/search/course" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          
+<fieldset class="grey-search-box">
+
+  <!-- Preamble -->
+  <div class="search-box-preamble">
+      </div>
+
+  <div class="search-input-group">
+
+
+      <!-- Query input -->
+        
+<input class="search-query" id="c_q" placeholder="Search by course and/or university" name="c[q]" type="text" value=""/>
+      <!-- Submit input-->
+        <button class="btn-searchbox" type="submit"> Search</span></button>
+        <button class="btn__search--icon alternate-submit">
+          <i class="icon icon-search"></i>
+        </button>
+  </div>
+
+  <!-- Postamble -->
+  <div class="search-box-postamble">
+        </div>
+</fieldset>
+
+</form>  </div>
+</div>
+
+
+
+    <main>
+      <div class="advice appContainer">
+
+        <div id="flash">
+        </div>
+
+        <div class="advice-article"><div class="advice-article__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2404/at_85_percent_quality_group_of_students_walking.jpg&#39;)"></div><div class="advice-article__body"><div class="grid--no-gutter advice-article__body--inner-wrapper"><div class="advice-article__meta"><p><span class="author">By <span class='author-name'>Alan Bullock</span><br class='conditional-break' /><span class='author-title'>(Careers Adviser)</span></span><span class="separator">|</span><span class="publish-date">30 July 2015</span><span class="separator">|</span><span class="read-time">4 min read</span></p></div><div class="advice-article__content"><div class="back-to-top-button js-back-to-top-button js-stuck-affected sticky" data-show-and-stick-bottom-pad="70" href="#"><div class="icon-back-to-top"></div></div><div class="back-to-top-button js-back-to-top-button stuck-to-bottom" data-show-and-stick-content=".advice-article__body" data-show-and-stick-trigger=".advice-article__image" data-show-and-stick-trigger-mobile=".advice-article__image--mobile" href="#"><div class="icon-back-to-top"></div></div><div class="advice-article__category"><a href="/advice/personal-statements">Personal statements</a></div><h1 class="advice-article__heading">10 things to put in your personal statement</h1><div class="advice-article__meta--phablet-mobile"><p><span class="author">By <span class='author-name'>Alan Bullock</span><br class='conditional-break' /><span class='author-title'>(Careers Adviser)</span></span><span class="separator">|</span><span class="publish-date">30 July 2015</span><span class="separator">|</span><span class="read-time">4 min read</span></p></div><div class="advice-article--section"><div class="advice-article__intro "><p>No two personal statements should be the same (the clue is in the personal!). But there are certain additions that will get the attention of the admissions tutor reading it whatever subject you want to study. </p><div class="advice-share hide-on-16col"><div class="advice-share__social advice-share-icons"><h3 class="heading">Share this page</h3><div class="sharing-icon-section"><div class="addanother-left"><div class="addanother addanother-classic">
+      <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=&amp;p%5Btitle%5D=&amp;p%5Bsummary%5D=" class="addanother-facebook-share is-trackable" target="_blank" data-ga-action="addanother-share-click" data-ga-category="facebook" data-mobileurl="http://m.facebook.com/sharer.php?u=&amp;t=">
+  <div class="addanother-service facebook icon-facebook"></div>
+</a>
+
+      <a href="https://twitter.com/intent/tweet?url=&amp;text=" class="is-trackable addanother-twitter-share" data-ga-action="addanother-share-click" data-ga-category="twitter" data-mobileurl="http://mobile.twitter.com/home?status=%20">
+  <div class="addanother-service twitter icon-twitter"></div>
+</a>
+
+      <a target="_blank" href="https://plus.google.com/share?url=" class="is-trackable addanother-google-share" data-ga-action="addanother-share-click" data-ga-category="google">
+  <div class="addanother-service google icon-google"></div>
+</a>
+
+</div>
+</div></div></div><div class="advice-share__email-print advice-share-icons"><h3 class="heading">Email & Print</h3><div class="sharing-icon-section"><div class="addanother-right"><div class="addanother addanother-classic">
+      <a href="mailto:%20?subject=&amp;body=%20" class="is-trackable addanother-email-share" data-ga-action="addanother-share-click" data-ga-category="email" target="_blank">
+  <div class="addanother-service email icon-msg"></div>
+</a>
+
+      <a href="#" class="is-trackable addanother-print-share" data-ga-action="addanother-share-click" data-ga-category="print">
+  <div class="addanother-service print icon-print"></div>
+</a>
+
+</div>
+</div></div></div></div></div><div class="advice-article__image--mobile"><img src="//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2404/at_85_percent_quality_group_of_students_walking.jpg" /></div><div class="advice-article__body"><p>Remember: what you write could end up being the decider between you and another candidate. <br>
+<br>
+Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement">10 things admissions tutors don't want to see in your personal statement</a> at all costs - plus, don't miss out latest round-up of <a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in">10 MORE personal statement must-haves</a>.</p>
+
+<h2>Personal statements - tips from universities </h2>
+
+<p>We asked admissions tutors for their personal statement dos and don'ts <span style="line-height: 16.6399993896484px;">- </span> here's what they said...<br>
+<br>
+<iframe width="480" height="270" src="http://www.youtube.com/embed/fPoJK8gFMiY" frameborder="0" allowfullscreen></iframe></p>
+
+<h2>1. Explain your reasons for wanting to study the course</h2>
+
+<p>What motivates you to take this course at a university level? Mention how your interest developed, what you have done to pursue it or how you've drawn inspiration from your current studies. Or, just demonstrate your enthusiasm for it.</p>
+
+<p>'Be specific from line one.' (English admissions tutor)<br>
+<br>
+<strong>More useful advice:</strong></p>
+
+<ul>
+	<li><a href="/advice/personal-statements/personal-statement-subject-guides-admission-tutor-tips">Subject-specific personal statement advice</a></li>
+</ul>
+
+<!-- START OF UDC -->
+
+<div id="udc-container">
+
+	<style type="text/css" scoped>
+	.cf:before,
+	.cf:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+	.cf:after {
+	    clear: both;
+	}
+	.cf {
+	    *zoom: 1;
+	}
+	#udc-card {
+		width: 100%;
+		background-color: #fff;
+		text-align: center;
+		margin-bottom: 54px;
+		margin-top: 54px;
+		color: #05171d;
+		box-shadow: 0 0 20px -2px rgba(43, 50, 57, 0.18);
+		box-sizing: border-box;
+		border: 1px solid #e0e0e0
+	}
+	#udc-card h1 {
+		font-size: 36px;
+		line-height: 42px;
+		margin-top: 42px;
+		margin-bottom: 24px;
+		font-family: StagSansWeb-Medium, Helvetica, Arial, sans-serif;
+		padding: 0 2%;
+	}
+	#udc-card h2 {
+		font-size: 18px;
+		line-height: 30px;
+		font-family: StagSansWeb-Book, Helvetica, Arial, sans-serif !important;
+		padding:0 12%;
+		color: #d81b60;
+	}
+	#udc-card h3 {
+		font-size: 24px;
+		line-height: 36px;
+		font-family: StagSansWeb-Book, Helvetica, Arial, sans-serif !important;
+		padding-bottom: 12px;
+	}
+	#udc-form {
+		padding-top: 30px;
+	}
+	#udc-card select, #udc-card input[type='email'] {
+		height: 48px !important;
+		font-family: 'Open Sans', sans-serif;
+		padding-left: 18px;
+		border: 2px solid #e0e0e0;
+		color: #212121;
+		width: 100% !important;
+		max-width: 400px;
+		margin-top: 12px;
+	}
+	#udc-card select:focus, #udc-card select:active, #udc-card input:focus, #udc-card input:active {
+		border: 2px solid #2196f3;
+	}
+	#udc-card select:hover, #udc-card input:hover {
+		border: 2px solid #616161;
+	}
+	.udc-frm-row {
+		margin-bottom: 24px;
+	}
+	#udc-card label {
+		font-family: "StagSansWeb-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	#udc-card label#udc-opt-in-lbl {
+		font-size: 14px;
+		display: block;
+		padding-left: 36px;
+		margin-top:-25px;
+		font-family: 'Open Sans', sans-serif;
+	}
+	#udc-card input[type='checkbox'] {
+		vertical-align: bottom;
+		width:24px;
+		height: 24px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	#udc-card .chkbox {
+		text-align: left;
+	}
+	#udc-card .row-1 {
+		margin-bottom: 54px;
+	}
+	#udc-card #step-2 {
+		background-color: #f5f5f5;
+		    padding: 0 20px;
+		text-align: left;
+		position: relative;
+		display: none;
+	}
+	#udc-card #left, #udc-card #right {
+		padding: 0 15%;
+	}
+	#udc-card button {
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		background: #d32f2f;
+		color: #fff;
+		font-family: StagSansWeb-Book, Helvetica, Arial, sans-serif;
+		font-size: 18px;
+		width: 100%;
+		height: 54px;
+		text-align: center;
+		transition: background .25s ease-in-out;
+		-moz-transition: background .25s ease-in-out;
+		-webkit-transition: background .25s ease-in-out;
+	}
+	#udc-card button:hover {
+		background: #b71c1c;
+	}
+	#udc-card ul {
+		margin-bottom: 36px;
+	}
+	#udc-card ul li {
+		list-style-type: none;
+		list-style: none;
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAQCAYAAAD9L+QYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFRDMyNEQ3OTkwNkQxMUU1QTY5ODgxMkM4OTE0QTJENSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFRDMyNEQ3QTkwNkQxMUU1QTY5ODgxMkM4OTE0QTJENSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkVEMzI0RDc3OTA2RDExRTVBNjk4ODEyQzg5MTRBMkQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkVEMzI0RDc4OTA2RDExRTVBNjk4ODEyQzg5MTRBMkQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+LhWTUgAAAUxJREFUeNqs1M8rBHEYx/EZJqs9uKBIcZNSioOUwlX+AUeOrpRfRdqQpNZtOYmkPXCU3CgcXMnBbU8c9qCUKOH91GdqaLbd9Z1vvZp2Z76ffeZ5ZtZPTVx5Lut9b/DX5/rJ6yYO8zgMvASXgtfRgvEgweBWDqtoxh3WgoSC2xTcqOAM7frwXXvO6rAq0YBbbBD8aSdcK+/EsoJvsBUGu4ZbcAZpXCJL8Ff0ghqdHINfRXCPWmF7z+OCw8pX0IV27OC7THAfFlGHM9tDcOweq/wAbxjFtL4rtfqxpOAT5EoFh+H3GsorhvV2xc1iCAuoRR775XoXVvmoW33BgKpLRa4bwYyC7U6PKhlMtAUFzKGIXs0iHWmXDXwXx5VO/W9/nzCLZ3RjG1Macg6n1TyrccMr6gcK+gOy4KyeDM813FPvbQYP2MTFf96yHwEGAJeMUPM2DY1VAAAAAElFTkSuQmCC') no-repeat 0px 20px;
+		padding-left: 36px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 18px;
+		line-height: 36px;
+		margin-left: 4px;
+	}
+	#hide {
+		width: 100%;
+    	text-align: center;
+    	font-size: 14px;
+    	margin-bottom: 6px;
+	}
+	#hide a {
+		font-family: 'Open Sans', sans-serif;
+	}
+	.parents, .teachers, .students {
+		display: none;
+	}
+	@media screen and (max-width: 1249px) {
+		#udc-card #left, #udc-card #right {
+			float: none;
+			width: 100%;
+			padding:0 8%;
+		}
+		#udc-card #step-2 {
+			padding:0 0 72px 0;
+		}
+	}
+	</style>
+
+	<div id="udc-card">
+
+		<h1>Expert tips from universities and the inside scoop from students</h1>
+
+		<!-- <h2>Which? can help you whether you're a student, parent or teacher. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis.</h2> -->
+
+		<form id="udc-form" action="#">
+					
+			<div class="udc-frm-row row-1">
+				<label for="udc-role">I am a...</label><br>
+				<select name="select" id="udc-role" required>
+					<option value="" selected disabled>Student, Parent or Teacher</option> 
+					<option value="students">Student</option>
+					<option value="parents">Parent</option>
+					<option value="teachers">Teacher</option>
+				</select>
+			</div>
+
+			<div id="step-2" class="cf">
+
+				<h3>Get our free guides and tips straight to your inbox, including:</h3>
+
+				<div class="parents">
+
+					<ul>
+						<li>Receive our free parents' guide to university</li>
+						<li>Help your child manage their finances while at university </li>
+						<li>Find out about student essentials and money saving tips</li>
+					</ul>
+
+				</div>
+
+				<div class="students">
+
+					<ul>
+						<li>Get a free copy of our getting into uni guide</li>
+						<li>Be guided on the uni application process</li>
+						<li>Get insider tips on writing your personal statement</li>
+						<li>Find out which banks offer the best student accounts</li>
+					</ul>
+
+				</div>
+
+				<div class="teachers">
+
+					<ul>
+						<li>Be the first to receive our classroom resources</li>
+						<li>Get tips and advice to help your students succeed</li>
+						<li>Receive timely support such as tips on writing UCAS references</li>
+					</ul>
+
+				</div>
+
+				<div class="udc-frm-row">
+					<label for="udc-email">My email address is</label><br>
+					<input type="email" id="udc-email" name="udc-email">
+				</div>
+
+				<div class="udc-frm-row chkbox">
+					<!-- <input type="checkbox" name="udc-opt-in" id="udc-opt-in">
+					<label for="udc-opt-in" id="udc-opt-in-lbl">As well as the free guides detailed above, Which? has tons of other stuff we'd like to  email you about every now and again. Which? will never share or sell your information to third parties.</label> -->
+					<small>In pressing the button below we'll keep you informed by email about Which? University and other products and services from the Which? Group</small>
+				</div>
+
+				<div class="udc-frm-row">
+					<button>Sign me up</button>
+				</div>
+
+				<div id="hide"><a href="#" id="">Hide this</a></div>
+
+			</div><!-- #step-2 -->
+
+		</form>
+
+	</div><!-- #udc-card -->
+
+</div><!-- #udc-container -->
+
+<!-- END OF UDC -->
+
+<h2>2. Explain how you're right for the course</h2>
+
+<p>Provide evidence that you fit the bill - not only that you meet the selection criteria but also that you've researched the course or profession and understand what studying the <a href="/courses">subject at university level</a> will involve, and that you are prepared for this.</p>
+
+<p>'Keep on topic and show that you've really done your research and know why you want to do the course.' (Sport admissions tutor)<br>
+<br>
+<strong>More useful advice:</strong></p>
+
+<ul>
+	<li><a href="/advice/personal-statements/personal-statements-the-student-guide-to-selling-yourself">How to 'sell yourself' in your personal statement</a></li>
+</ul>
+
+<h2>3. Say what you've done outside the classroom</h2>
+
+<p>If possible, outline how you've pursued your interest in your chosen subject beyond your current syllabus.</p>
+
+<p>For example, talk about any further reading you've done around the subject and give your critical views or reflective opinions about it. This could be from books, quality newspapers, websites, periodicals or scientific journals or from films, documentaries, blogs, radio programmes, podcasts, attending public lectures and so on.</p>
+
+<p>But try to avoid mentioning the wider reading that <em>everyone</em> else is doing.</p>
+
+<p>'If I have to read about <em>Freakonomics</em> once more, I'll scream!' (Economics admissions tutor)<br>
+<br>
+<strong>More useful advice:</strong></p>
+
+<ul>
+	<li><a href="/advice/personal-statements/how-to-make-your-personal-statement-stand-out-as-told-by-admissions-tutors">Make your personal statement stand out</a></li>
+</ul>
+
+<h2>4. Why it's relevant to your course...</h2>
+
+<p>Reflect on your experiences, explaining what you've learned from them or how they've helped develop your interest in the subject - it could be <a href="/advice/personal-statements/personal-statements-how-to-make-your-work-experience-really-count">work experience</a>, volunteering, a university taster session or outreach programme, summer schools, museum,  gallery or theatre visits, archaeological digs, visits to the local courts, travel, competitions or a maths challenge.</p>
+
+<p>'It doesn't have to be anything fancy!' (Archaeology admissions tutor)</p>
+
+<h2>5. … And relevant to your chosen career</h2>
+
+<p>Reflecting on relevant experience or observation will be essential for some professional courses where, in effect, you're applying for the career as well as the course:<br>
+<br>
+'Whatever environment you've been in, what did you spot or learn from what happens there, or what have you observed about how the qualities exhibited by professional staff helped them engage effectively with patients or service-users?' (Medicine admissions tutor)<br>
+<br>
+'Reflect on your experience, don't just describe it. Talk about the skills the profession needs, how you've noticed this and how you've developed those skills yourself.' (Occupational Therapy admissions tutor)<br>
+<br>
+<strong>More useful advice:</strong></p>
+
+<ul>
+	<li><a href="/advice/personal-statements/personal-statements-how-to-make-your-work-experience-really-count">How to make your work experience count in your personal statement</a></li>
+</ul>
+
+<h2>6. Can you demonstrate transferable skills?</h2>
+
+<p>Yes you can - and admissions tutors will want to hear about them. It could be your ability for working independently, teamwork, good time management, problem-solving, leadership, listening or organisational skills.</p>
+
+<h2>7. Expand on the most relevant ones</h2>
+
+<p>But don't simply list off the skills you think you have - think about which ones relate most readily to the course you're applying to, then demonstrate how you've developed, used and improved these. Again, admissions tutors want to hear about <em>specific</em> examples, like:</p>
+
+<ul>
+	<li>projects and assignments (what role did you play, what went well?)</li>
+	<li>positions of responsibility (what did you achieve, how has it improved your self-confidence?)</li>
+	<li>sport, music or drama (what did you learn from your role, how did you work as a team?)</li>
+	<li>Young Enterprise, Duke of Edinburgh's Award (what was the biggest challenge, how did you overcome it?)</li>
+	<li>volunteering or a part-time job (what have you observed, what extra responsibilities have you taken on, what skills have you demonstrated yourself?).</li>
+</ul>
+
+<h2>8. Show that you're a critical thinker</h2>
+
+<p>University is all about being able to think independently and analytically so being able to demonstrate that you're working like this already is a big plus point. Briefly explaining <u>how</u> one of your A-level subjects, a BTEC assignment or placement, or additional studies such as the <a href="/advice/personal-statements/epq-extended-project-qualification-personal-statement-top-tips">Extended Project Qualification (EPQ)</a> has made you think more critically could be a way of doing this.</p>
+
+<p>'If you're taking the EPQ, do talk about it, as it's the kind of studying you'll be doing at uni.' (Modern languages admissions tutor)</p>
+
+<h2>9. What's the long-term plan?</h2>
+
+<p>Mention what your longer term goals are if you can do it in an interesting way and you've got a specific path in mind. But, if you do, then try and show a spark of individuality or imagination.</p>
+
+<p>'Just saying you want to be a journalist isn't exactly going to stand you out from the crowd.' (History admissions tutor)</p>
+
+<p>If you're not sure yet, just talk about what you're looking forward to at uni and what you want to gain from your course or from university life.</p>
+
+<p>If you're applying for deferred entry, do mention your gap year plans if you've made a firm decision to take a year out. Most courses are <a href="/advice/ucas-application/how-do-universities-view-gap-years">happy for you to take a gap year</a> - but will want to know how you plan to spend it.</p>
+
+<h2>10. Keep it positive</h2>
+
+<p>It can be difficult to get going with your personal statement, but don't panic. Start with your strengths, focus on your enthusiasm for the course and talk positively about yourself.</p>
+</div><div class="advice-share full-width"><div class="advice-share__social advice-share-icons"><h3 class="heading">Share this page</h3><div class="sharing-icon-section"><div class="addanother-left"><div class="addanother addanother-classic">
+      <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=&amp;p%5Btitle%5D=&amp;p%5Bsummary%5D=" class="addanother-facebook-share is-trackable" target="_blank" data-ga-action="addanother-share-click" data-ga-category="facebook" data-mobileurl="http://m.facebook.com/sharer.php?u=&amp;t=">
+  <div class="addanother-service facebook icon-facebook"></div>
+</a>
+
+      <a href="https://twitter.com/intent/tweet?url=&amp;text=" class="is-trackable addanother-twitter-share" data-ga-action="addanother-share-click" data-ga-category="twitter" data-mobileurl="http://mobile.twitter.com/home?status=%20">
+  <div class="addanother-service twitter icon-twitter"></div>
+</a>
+
+      <a target="_blank" href="https://plus.google.com/share?url=" class="is-trackable addanother-google-share" data-ga-action="addanother-share-click" data-ga-category="google">
+  <div class="addanother-service google icon-google"></div>
+</a>
+
+</div>
+</div></div></div><div class="advice-share__email-print advice-share-icons"><h3 class="heading">Email & Print</h3><div class="sharing-icon-section"><div class="addanother-right"><div class="addanother addanother-classic">
+      <a href="mailto:%20?subject=&amp;body=%20" class="is-trackable addanother-email-share" data-ga-action="addanother-share-click" data-ga-category="email" target="_blank">
+  <div class="addanother-service email icon-msg"></div>
+</a>
+
+      <a href="#" class="is-trackable addanother-print-share" data-ga-action="addanother-share-click" data-ga-category="print">
+  <div class="addanother-service print icon-print"></div>
+</a>
+
+</div>
+</div></div></div></div></div></div><div class="advice-share sidebar"><div class="advice-share"><div class="advice-share__social advice-share-icons"><h3 class="heading">Share this page</h3><div class="sharing-icon-section"><div class="addanother-left"><div class="addanother addanother-classic">
+      <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=&amp;p%5Btitle%5D=&amp;p%5Bsummary%5D=" class="addanother-facebook-share is-trackable" target="_blank" data-ga-action="addanother-share-click" data-ga-category="facebook" data-mobileurl="http://m.facebook.com/sharer.php?u=&amp;t=">
+  <div class="addanother-service facebook icon-facebook"></div>
+</a>
+
+      <a href="https://twitter.com/intent/tweet?url=&amp;text=" class="is-trackable addanother-twitter-share" data-ga-action="addanother-share-click" data-ga-category="twitter" data-mobileurl="http://mobile.twitter.com/home?status=%20">
+  <div class="addanother-service twitter icon-twitter"></div>
+</a>
+
+      <a target="_blank" href="https://plus.google.com/share?url=" class="is-trackable addanother-google-share" data-ga-action="addanother-share-click" data-ga-category="google">
+  <div class="addanother-service google icon-google"></div>
+</a>
+
+</div>
+</div></div></div><div class="advice-share__email-print advice-share-icons"><h3 class="heading">Email & Print</h3><div class="sharing-icon-section"><div class="addanother-right"><div class="addanother addanother-classic">
+      <a href="mailto:%20?subject=&amp;body=%20" class="is-trackable addanother-email-share" data-ga-action="addanother-share-click" data-ga-category="email" target="_blank">
+  <div class="addanother-service email icon-msg"></div>
+</a>
+
+      <a href="#" class="is-trackable addanother-print-share" data-ga-action="addanother-share-click" data-ga-category="print">
+  <div class="addanother-service print icon-print"></div>
+</a>
+
+</div>
+</div></div></div></div><div class="advice-share__related-articles sidebar js-stick-me-please" data-sticky-offset="63" data-sticky-parent=".grid--no-gutter"><h3 class="heading">You may want to look at these...</h3><ul class="asset-group-wrapper  related-article-result__list has-3-assets has-3-internal-page-asset search-result__list" id="advice-show-side-relateds"><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos0 even first num-1-of-3 like-asset-group-pos0 like-asset-group-even like-asset-group-first like-asset-group-num-1-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2402/at_85_percent_quality_asking_question_in_lecture.jpg&#39;)"><div class="read-time">3 min read</div></div><div class="search-result__content"><h2>10 things NOT to put in your personal statement</h2><p>If you're serious about going to uni, read 10 things you should NOT put in your personal statement, and steer well clear of them.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos1 odd middle num-2-of-3 like-asset-group-pos1 like-asset-group-odd like-asset-group-middle like-asset-group-num-2-of-3 asset-source-advice-article related-article"><a href="/advice/ucas-application/the-getting-into-uni-guide"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/6042/at_85_percent_quality_main-image-tsr.jpg&#39;)"><div class="read-time">1 min read</div></div><div class="search-result__content"><h2>The Getting Into Uni Guide [Download]</h2><p>We&#39;ve teamed up with The Student Room to create a free, comprehensive guide to getting into university, covering everything from research to applying, finance to freshers&#39; week survival.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos2 even last final num-3-of-3 like-asset-group-pos2 like-asset-group-even like-asset-group-last like-asset-group-final like-asset-group-num-3-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/5514/at_85_percent_quality_iStock_000042644082_Large-article.jpg&#39;)"><div class="read-time">4 min read</div></div><div class="search-result__content"><h2>10 more things to put in your personal statement </h2><p>Our first top 10 of what to include in your personal statement article was so popular that we've got 10 more things to tick off as part of your application.</p></div></a></li></ul></div></div></div></div><div class="advice-article__related"><div class="search-results"><div class="grid--gutter"><h2>Related to this article</h2><ul class="asset-group-wrapper related-article-result__list js-carousel-me-with-defaults-please has-3-assets has-3-internal-page-asset search-result__list" id="advice-show-related"><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos0 even first num-1-of-3 like-asset-group-pos0 like-asset-group-even like-asset-group-first like-asset-group-num-1-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2402/at_85_percent_quality_asking_question_in_lecture.jpg&#39;)"><div class="read-time">3 min read</div></div><div class="search-result__content"><h2>10 things NOT to put in your personal statement</h2><p>If you're serious about going to uni, read 10 things you should NOT put in your personal statement, and steer well clear of them.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos1 odd middle num-2-of-3 like-asset-group-pos1 like-asset-group-odd like-asset-group-middle like-asset-group-num-2-of-3 asset-source-advice-article related-article"><a href="/advice/ucas-application/the-getting-into-uni-guide"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/6042/at_85_percent_quality_main-image-tsr.jpg&#39;)"><div class="read-time">1 min read</div></div><div class="search-result__content"><h2>The Getting Into Uni Guide [Download]</h2><p>We&#39;ve teamed up with The Student Room to create a free, comprehensive guide to getting into university, covering everything from research to applying, finance to freshers&#39; week survival.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos2 even last final num-3-of-3 like-asset-group-pos2 like-asset-group-even like-asset-group-last like-asset-group-final like-asset-group-num-3-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/5514/at_85_percent_quality_iStock_000042644082_Large-article.jpg&#39;)"><div class="read-time">4 min read</div></div><div class="search-result__content"><h2>10 more things to put in your personal statement </h2><p>Our first top 10 of what to include in your personal statement article was so popular that we've got 10 more things to tick off as part of your application.</p></div></a></li></ul></div></div></div><div class="advice-article__search-which"><div class="grid--no-gutter"><h2>Search Which? University</h2><h3>Find further advice or search for information on a course or university</h3><ul class="tabs" data-tab=""><li class="tab-item active"><a href="#advice-search">Search Advice</a></li><li class="tab-item"><a href="#course-or-university-search">Search courses &/or universities</a></li></ul><div class="tabs-content"><div class="content active" id="advice-search"><form class="form_search formtastic a" novalidate="novalidate" action="/search/advice" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<fieldset class="advice-category-article-search-box search--input">
+
+  <!-- Preamble -->
+  <div class="search-box-preamble">
+      </div>
+
+  <div class="search-input-group">
+
+
+      <!-- Query input -->
+        
+<input class=" " id="a_q" placeholder="Search for advice" name="a[q]" type="text" value=""/>
+      <!-- Submit input-->
+        <button class="btn__base--blue" type="submit"> Search</span></button>
+        <button class="btn__search--icon alternate-submit">
+          <i class="icon icon-search"></i>
+        </button>
+  </div>
+
+  <!-- Postamble -->
+  <div class="search-box-postamble">
+        </div>
+</fieldset>
+</form></div><div class="content" id="course-or-university-search"><form class="form_search formtastic c" novalidate="novalidate" action="/search/course" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<fieldset class="advice-category-article-search-box search--input">
+
+  <!-- Preamble -->
+  <div class="search-box-preamble">
+      </div>
+
+  <div class="search-input-group">
+
+
+      <!-- Query input -->
+        
+<input class=" " id="c_q" placeholder="Search by course and/or university" name="c[q]" type="text" value=""/>
+      <!-- Submit input-->
+        <button class="btn__base--blue" type="submit"> Search</span></button>
+        <button class="btn__search--icon alternate-submit">
+          <i class="icon icon-search"></i>
+        </button>
+  </div>
+
+  <!-- Postamble -->
+  <div class="search-box-postamble">
+        </div>
+</fieldset>
+</form></div></div></div></div><div class="newsletter-section"><div class="grid"><div class="newsletter-section--body"><h3 class="center">We'll keep you updated with alerts, news and help where you need it.</h3><div class="newsletter-section--sign-up"><div class="newsletter-btn half"><div class="btn__red"><a href="/about/sign-up-for-updates">Newsletter sign up</a><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/icon-arrow-right-d39654da7ca3e03a8bfd7ea1a2d4a9f1.png" alt="Icon arrow right" /></div></div><div class="follow-us advice-share-icons"><p class="caps">Follow us:</p><div class="follow-us--icon"><div class="icon icon-facebook"></div></div><div class="follow-us--icon"><div class="icon icon-twitter"></div></div><div class="follow-us--icon"><div class="icon icon-google"></div></div><div class="follow-us--icon"><div class="icon icon-youtube"></div></div></div></div></div></div></div></div>
+
+    </div>
+  </main>
+    <div class="footer">
+  <div class="footer-container">
+    <div class="grid--gutter footer--advice">
+      <h2>Browse expert advice</h2>
+      <ul class="tag-words">
+        <li>
+          <a href="/advice/a-level-choices">A-level choices</a>
+        </li>
+        <li>
+          <a href="/advice/career-prospects">Career prospects</a>
+        </li>
+        <li>
+          <a href="/advice/choosing-a-course">Choosing a course</a>
+        </li>
+        <li>
+          <a href="/advice/clearing-results-day">Clearing and results day</a>
+        </li>
+        <li>
+          <a href="/advice/gcse-choices-university">GCSE choices and university</a>
+        </li>
+        <li>
+          <a href="/advice/personal-statements">Personal statements</a>
+        </li>
+        <li>
+          <a href="/advice/preparing-for-university">Preparing for university</a>
+        </li>
+        <li>
+          <a href="/advice/student-accommodation">Student accommodation</a>
+        </li>
+        <li>
+          <a href="/advice/student-finance">Student finance</a>
+        </li>
+        <li>
+          <a href="/advice/student-life">Student life</a>
+        </li>
+        <li>
+          <a href="/advice/ucas-application">Ucas application</a>
+        </li>
+        <li>
+          <a href="/advice/open-days">University open days</a>
+        </li>
+        <li>
+          <a href="/advice/advice-for-parents">Advice for parents</a>
+        </li>
+        <li>
+          <a href="/advice/teacher-resources">Teacher resources</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid--gutter">
+      <div class="grid--4of12 footer--about">
+        <h5>About this site</h5>
+        <ul class="outer"><li class="inner"><a class="footer-link link" href="/about">About us</a></li><li class="inner"><a class="footer-link link" href="/about/contact-us">Contact us</a></li><li class="inner"><a class="footer-link link" href="/about/cookie-policy">Cookie policy</a></li><li class="inner"><a class="footer-link link" href="/about/privacy-policy">Privacy policy</a></li><li class="inner"><a class="footer-link link" href="/about/sign-up-for-updates">Sign up to our newsletters</a></li><li class="inner"><a class="footer-link link" href="/about/terms-and-conditions">Terms and conditions</a></li><li class="inner"><a class="footer-link link" href="/about/where-we-get-our-info">Where we get our info</a></li><li class="inner"><a class="footer-link link" href="/about/who-we-work-with">Who we work with</a></li></ul>
+      </div>
+      <div class="grid--4of12 footer--partners">
+        <h5>Our partners</h5>
+        <a href="http://www.nus.org.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/nus-126bb66d7b509c5b5f92a3cb7c98965c.png" alt="Nus" /></a>
+        <p>The National Union of Students (NUS) supports Which? University as an independent source of information and advice for anyone considering higher education. We&#39;re working with NUS to bring you exclusive insights from student unions in universities and colleges across the UK.</p>
+      </div>
+      <div class="grid--4of12 footer--work">
+        <h5>Who we work with</h5>
+          <ul class="logos--left">
+            <li><a href="http://www.ucas.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/ucas-d6791034b683d15e63fcd6950adaac52.png" alt="Ucas" /></a></li>
+            <li><a href="http://www.hesa.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/hesa-114814d1733dab60eed91afa2cb0ea18.png" alt="Hesa" /></a></li>
+            <li><a href="http://www.heloa.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/heloa-4b744da659b04a871549b8d0b036f6c4.png" alt="Heloa" /></a></li>
+          </ul>
+          <ul class="logos--right">
+            <li><a href="http://www.hecsu.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/hecsu-25191bd7e47e7fb4b61a07a5df16bf4e.png" alt="Hecsu" /></a></li>
+            <li><a href="http://www.youthsight.com/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/youthsight-fa4438b3f1dc799b788499110bdf5fad.png" alt="Youthsight" /></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="global-footer group" role="contentinfo">
+  <nav class="footer-left group" role="navigation" aria-label="Footer">
+    <h2 class="a11y">Footer Navigation</h2>
+    <ul>
+        <li id="footer-item1">
+            <a href="http://www.which.co.uk/about-which/contact-us/">Contact us</a>
+        </li>
+        <li id="footer-item2">
+            <a href="http://www.which.co.uk/sitemap/">Which? Directory</a>
+        </li>
+        <li id="footer-item3">
+            <a href="http://www.which.co.uk/accessibility/">Accessibility</a>
+        </li>
+        <li id="footer-item4">
+            <a href="http://www.which.co.uk/terms-and-conditions/">Terms &amp; conditions</a>
+        </li>
+        <li id="footer-item5">
+            <a href="http://www.which.co.uk/privacy-policy/">Privacy</a>
+        </li>
+        <li id="footer-item6">
+            <a href="http://www.which.co.uk/privacy-policy/cookie-policy/">Cookies</a>
+        </li>
+    </ul>
+  </nav>
+  <div class="footer-right">
+    <span class="strapline">Which? works for you</span>
+    <span id="copyright_notice">&copy; Which? 2015</span>
+  </div>
+</footer>
+
+
+<script type="text/javascript" src="_js/jquery.validate.min.js"></script>
+
+  <script>
+  $(document).ready(function () {
+
+  	$('#udc-role').change(function() {
+  		var option = $(this).find('option:selected').val();
+  		$('.students, .parents, .teachers').hide();
+  		$('.'+option).show();
+  		$('#step-2').slideDown();
+  		$('html, body').animate({
+	        scrollTop: $("#udc-form").offset().top
+	    }, 1000);
+  	});
+
+  	$('#hide a').click(function(e) {
+  		e.preventDefault();
+  		$('#step-2').slideUp();
+  		$('#udc-role').prop('selectedIndex',0);
+  		$('html, body').animate({
+	        scrollTop: $("#udc-card").offset().top
+	    }, 1000);
+  	});
+
+  	$("#udc-form").submit(function(e) { e.preventDefault() }).validate( {
+
+  			rules: {
+	            'udc-email': {
+	                required: true,
+	                email: true
+	            }
+	        },
+	        
+	        // Specify the validation error messages
+	        messages: {
+	            'udc-email': "Please enter a valid email address"
+	        },
+	    	submitHandler: function(form) {
+
+
+			}
+	}); 
+
+  });
+  </script>
+  <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0014/1583.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+  
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -1360,10 +1359,139 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 </ul>
 
 <!-- START OF UDC -->
-<script type="text/javascript" src="_js/udc-white-jquery.min.js"></script>
+<script type="text/javascript" src="_js/test-stuff.js"></script>
+<script type="text/javascript" src="_js/udc-jquery.js"></script>
+
+<div id="udc-container" style="display:none;">
+
+	<div id="udc-card">
+
+		<div id="udc-screen-1">
+
+			<h1>Free guides and university advice - straight to your inbox</h1>
+
+			<h2>Tailored newsletters to help you stay on track</h2>
+
+			<form id="udc-form" action="#" method="post">
+						
+				<div class="udc-frm-row row-1">
+					<label for="custom-3634">I am a...</label>
+					<select id="custom-3634" name="custom-3634" required>
+						<option value="" selected disabled>Student, Parent or Teacher</option> 
+						<option value="Student">Student</option>
+						<option value="Parent">Parent</option>
+						<option value="Teacher">Teacher</option>
+					</select>
+				</div>
+
+				<div id="step-2" class="cf">
+
+					<h3>You'll receive:</h3>
+
+					<div class="Parent">
+
+						<ul>
+							<li>The <em>Which? Parents' Guide to University</em></li>
+							<li>What parents need to know about student finance </li>
+							<li>Help them with bills, budgets and money matters</li>
+							<li>Packing, preparing and products they should take</li>
+						</ul>
+
+					</div>
+
+					<div class="Student">
+
+						<ul>
+							<li>The complete <em>Getting Into Uni Guide</em></li>
+							<li>Insider tips from students and universities on applications</li>
+							<li>Expert advice on writing your personal statement</li>
+							<li>Best student bank accounts, gadgets and what to take</li>
+						</ul>
+
+					</div>
+
+					<div class="Teacher">
+
+						<ul>
+							<li>Timely tips and materials to use in the classroom</li>
+							<li>Graphics, guides and posters to download for free</li>
+							<li>Be the first to receive brand-new resources</li>
+							<li>Practical pointers to help your students succeed</li>
+						</ul>
+
+					</div>
+
+					<div class="udc-frm-row fname">
+						<label for="firstname">First name</label>
+						<input type="text" id="firstname" name="firstname">
+					</div>
+
+					<div class="udc-frm-row lname">
+						<label for="lastname">Last name</label>
+						<input type="text" id="lastname" name="lastname">
+					</div>
+
+					<div class="udc-frm-row email">
+						<label for="email">Email address</label>
+						<input type="email" id="email" name="email">
+					</div>
+
+					<div class="udc-frm-row chkbox">
+						<!-- <input type="checkbox" name="udc-opt-in" id="udc-opt-in">
+						<label for="udc-opt-in" id="udc-opt-in-lbl">As well as the free guides detailed above, Which? has tons of other stuff we'd like to  email you about every now and again. Which? will never share or sell your information to third parties.</label> -->
+						<small>In pressing the button below you agree that we can keep you informed by email about Which? University and other products and services from the Which? Group. Your data will be processed in accordance with our <a href="http://www.which.co.uk/privacy-policy/which-privacy-policy/">privacy policy</a>.</small>
+					</div>
+
+					<div class="udc-frm-row">
+						<button type="submit" id="udc-btn-1">Sign me up</button>
+					</div>
+
+					<div id="hide"><a href="#" id="">Hide this</a></div>
+
+				</div><!-- #step-2 -->
+
+			</form>
+
+		</div><!-- #udc-screen-1 -->
+
+		<div id="udc-loading">
+
+			<img src="_img/i-loading.gif" alt="loading">
+
+		</div><!-- #udc-loading -->
+
+		<div id="udc-confirm">
+
+			<h1>Thank you!</h1>
+
+			<h2>You're all signed up. Look out for your welcome email from us shortly.</h2>
+
+			<button id="btn-close">Close this box</button>
+
+		</div><!-- #udc-confirm -->
+
+		<div id="udc-error">
+
+			<h1>Oh, no!</h1>
+
+			<h2>Sorry, there's been an error...</h2>
+
+			<button id="btn-close">Try again</button>
+
+			<p><small>If you experience persistent problems, please contact us at whichuniversity@which.co.uk<br><a href="#" class="lnk-close">...or close this box</a></small></p>
+
+			<div id="hide"></div>
+
+		</div><!-- #udc-error -->
+
+
+	</div><!-- #udc-card -->
+
+</div><!-- #udc-container -->
+
 <!-- END OF UDC -->
 
-<h2 id="damien">2. Explain how you're right for the course</h2>
+<h2>2. Explain how you're right for the course</h2>
 
 <p>Provide evidence that you fit the bill - not only that you meet the selection criteria but also that you've researched the course or profession and understand what studying the <a href="/courses">subject at university level</a> will involve, and that you are prepared for this.</p>
 
@@ -1651,6 +1779,51 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 </footer>
 
 
+<script type="text/javascript" src="_js/jquery.validate.min.js"></script>
+
+  <script>
+  $(document).ready(function () {
+
+  	$('#custom-3634').change(function() {
+  		var option = $(this).find('option:selected').val();
+  		$('.students, .parents, .teachers').hide();
+  		$('.'+option).show();
+  		$('#step-2').slideDown();
+  		$('html, body').animate({
+	        scrollTop: $("#udc-form").offset().top
+	    }, 1000);
+  	});
+
+  	$('#hide a').click(function(e) {
+  		e.preventDefault();
+  		$('#step-2').slideUp();
+  		$('#custom-3634').prop('selectedIndex',0);
+  		$('html, body').animate({
+	        scrollTop: $("#udc-card").offset().top
+	    }, 1000);
+  	});
+
+  	$("#udc-form").submit(function(e) { e.preventDefault() }).validate( {
+
+  			rules: {
+	            'email': {
+	                required: true,
+	                email: true
+	            }
+	        },
+	        
+	        // Specify the validation error messages
+	        messages: {
+	            'email': "Please enter a valid email address"
+	        },
+	    	submitHandler: function(form) {
+
+
+			}
+	}); 
+
+  });
+  </script>
   <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");
 var b=document.getElementsByTagName("script")[0];

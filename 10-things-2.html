@@ -1,32 +1,38 @@
+<!-- START OF UDC -->
+<script type="text/javascript" src="_js/udc-white-jquery.min.js"></script>
+<!-- END OF UDC -->
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"46144c735a","applicationID":"694359","transactionName":"IgxeTEQLX19RExYDBhcKU11FS0BbWxY=","queueTime":4,"applicationTime":388,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"46144c735a","applicationID":"694359","transactionName":"IgxeTEQLX19RExYDBhcKU11FS0BbWxY=","queueTime":6,"applicationTime":401,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
 <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMGVVBUGwUJUFJXDg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
-
+  
+      <script src="//cdn.optimizely.com/js/3158740169.js" async="async"></script>
+    
 	<link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <title>10 things to put in your personal statement - Which? University</title><META NAME="Description" CONTENT="What is a personal statement and how do you make yours stand out? Here are 10 tips to impress an admissions tutor when writing your personal statement..." /><META NAME="Keywords" CONTENT="Personal statements,UCAS application" /><link rel="canonical" href="http://university.which.co.uk/advice/personal-statements/10-things-to-put-in-your-personal-statement">
-<META NAME="google-site-verification" content="VMg6Z1Nkesjiz8P8uxODS_dz2KEHOEbcyjjq5lsAsxE" /><meta property="og:title" content="10 things to put in your personal statement - Which? University" /><meta property="og:url" content="http://university.which.co.uk/advice/personal-statements/10-things-to-put-in-your-personal-statement" /><meta property="og:image" content="http://dtmw9u23bb9ya.cloudfront.net/assets/Which_uni_200px-b576319b11ecca331ce3134493924d47.png" /><meta property="og:description" content="What is a personal statement and how do you make yours stand out? Here are 10 tips to impress an admissions tutor when writing your personal statement..." /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@whichuniuk" /><meta name="twitter:image" content="http://dtmw9u23bb9ya.cloudfront.net/assets/Which_uni_4-3-8f91203e88d6678eca8a491713342a0a.png" />
+<META NAME="google-site-verification" content="VMg6Z1Nkesjiz8P8uxODS_dz2KEHOEbcyjjq5lsAsxE" /><meta property="og:title" content="10 things to put in your personal statement - Which? University" /><meta property="og:url" content="http://university.which.co.uk/advice/personal-statements/10-things-to-put-in-your-personal-statement" /><meta property="og:image" content="http://dtmw9u23bb9ya.cloudfront.net/assets/Which_uni_200px-bbc513f21cb80485b857e01fa4169f1e.png" /><meta property="og:description" content="What is a personal statement and how do you make yours stand out? Here are 10 tips to impress an admissions tutor when writing your personal statement..." /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@whichuniuk" /><meta name="twitter:image" content="http://dtmw9u23bb9ya.cloudfront.net/assets/Which_uni_4-3-9ac0d9dc40f6c39fb38f9d5651a1fc15.png" />
   <!--[if IE ]>
-  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/ie-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/ie-74f1e499bed54fea6a61d72ab04545d8.css" />
   <![endif]-->
   <!--[if IE 9]>
-  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/ie9-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/ie9-74f1e499bed54fea6a61d72ab04545d8.css" />
   <![endif]-->
   <!--[if lt IE 9]>
-  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/lt-ie9-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/lt-ie9-74f1e499bed54fea6a61d72ab04545d8.css" />
   <![endif]-->
   <!--[if lt IE 8]>
-  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/lt-ie8-3bfe7162901d6b3b88dfebdd60ca1308.css" />
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/lt-ie8-74f1e499bed54fea6a61d72ab04545d8.css" />
   <![endif]-->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/application-c878a04b14daa554e5a8e07dd0455d7d.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/assets/application-b84cc0ce9003aac1a03a5f6bedc2c650.css" />
   <link href="//wca-assets-which-prod-euwest1.s3.amazonaws.com/fragment/prod/application-f2fa9f333ebc607008255f21e7dc58b6.css" media="all" rel="stylesheet" />
-  <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/application-7d6989217a95f6833d23c135dbb640a3.js"></script>
+  <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/application-6dd251e0168e1e4e761e42989ede0739.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
-    <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/search.ie8-1dca37b14fc3a0622aa5221c732437bf.js"></script>
-    <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/html5shiv-printshiv-2e361ea6d6a3d1550edde697c5c01fa1.js"></script>
+    <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/legacy/search.ie8-84d313f684df9d0f9f93f082d34cfa94.js"></script>
+    <script src="http://dtmw9u23bb9ya.cloudfront.net/assets/html5shiv-printshiv-e52c9f2a0f501b10af5be40540b4922a.js"></script>
   <![endif]-->
   <noscript>
   <link rel="stylesheet" media="all" href="http://dtmw9u23bb9ya.cloudfront.net/stylesheets/nojs.css" />
@@ -34,7 +40,7 @@
 
   
   <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="TklaKEyJ66iFPdODyEo1FkYHoaNogP1HdDziuMSWwdq/57OBPBp9V2wjLiIzpYZlVIqoOyo3kmA050HQ7SH7bA==" />
+<meta name="csrf-token" content="tU7uMVmrm5oQPvydFT3x+PBcqFUgLykHIc/gOMMzqFDTSbClBChlfsZk79UK11DSQRt4FQx1SEFeYgAIX91dVw==" />
   <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
@@ -107,7 +113,7 @@ dataLayer.push({
       <ul class="quicklinks">
 
         <li>
-          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d0" aria-expanded="false">
+          <a class="nav-links" href="http://www.which.co.uk/sitemap/" aria-controls="d0" aria-expanded="false">
             <div class="button quicklink-button switch-a">
               <div class="button-label no-border">Product Reviews<span class="more-less icon-more"></span>
               </div>
@@ -356,7 +362,7 @@ dataLayer.push({
 
 
         <li>
-          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d1" aria-expanded="false">
+          <a class="nav-links" href="http://www.which.co.uk/sitemap/" aria-controls="d1" aria-expanded="false">
             <div class="button quicklink-button switch-a">
               <div class="button-label ">Campaigns<span class="more-less icon-more"></span>
               </div>
@@ -454,7 +460,7 @@ dataLayer.push({
 
 
         <li>
-          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d2" aria-expanded="false">
+          <a class="nav-links" href="http://www.which.co.uk/sitemap/" aria-controls="d2" aria-expanded="false">
             <div class="button quicklink-button switch-a">
               <div class="button-label ">Our Services<span class="more-less icon-more"></span>
               </div>
@@ -572,7 +578,7 @@ dataLayer.push({
 
 
         <li>
-          <a class="nav-links" href="http://www.which.co.uk/" aria-controls="d3" aria-expanded="false">
+          <a class="nav-links" href="http://www.which.co.uk/sitemap/" aria-controls="d3" aria-expanded="false">
             <div class="button quicklink-button switch-a">
               <div class="button-label ">About us<span class="more-less icon-more"></span>
               </div>
@@ -1239,7 +1245,7 @@ dataLayer.push({
         <div class="grid nav-container">
           <div class="logo-holder">
             <a href="/">
-              <img src="http://dtmw9u23bb9ya.cloudfront.net/assets/WhichLogo2Uni-bda7ebdb6627c359e22834746e7d3b36.png" alt="Whichlogo2uni" />
+              <img src="http://dtmw9u23bb9ya.cloudfront.net/assets/WhichLogo2Uni-2f547b43098dd790b7b034677b8966c7.png" alt="Whichlogo2uni" />
 </a>          </div>
           <div class="navigation">
             <div class="secondary-links">
@@ -1343,13 +1349,13 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 
 <h2>Personal statements - tips from universities </h2>
 
-<p>We asked admissions tutors for their personal statement dos and don'ts <span style="line-height: 16.6399993896484px;">- </span> here's what they said...<br>
+<p>We asked admissions tutors for their personal statement dos and don'ts <span style="line-height: 16.6399993896484px;">– </span> here's what they said...<br>
 <br>
 <iframe width="480" height="270" src="http://www.youtube.com/embed/fPoJK8gFMiY" frameborder="0" allowfullscreen></iframe></p>
 
 <h2>1. Explain your reasons for wanting to study the course</h2>
 
-<p>What motivates you to take this course at a university level? Mention how your interest developed, what you have done to pursue it or how you've drawn inspiration from your current studies. Or, just demonstrate your enthusiasm for it.</p>
+<p>What motivates you to take this course at a university level? Mention how your interest developed, what you have done to pursue it or how you’ve drawn inspiration from your current studies. Or, just demonstrate your enthusiasm for it.</p>
 
 <p>'Be specific from line one.' (English admissions tutor)<br>
 <br>
@@ -1359,15 +1365,11 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 	<li><a href="/advice/personal-statements/personal-statement-subject-guides-admission-tutor-tips">Subject-specific personal statement advice</a></li>
 </ul>
 
-<!-- START OF UDC -->
-<script type="text/javascript" src="_js/udc-white-jquery.min.js"></script>
-<!-- END OF UDC -->
+<h2>2. Explain how you're right for the course</h2>
 
-<h2 id="damien">2. Explain how you're right for the course</h2>
+<p>Provide evidence that you fit the bill – not only that you meet the selection criteria but also that you’ve researched the course or profession and understand what studying the <a href="/courses">subject at university level</a> will involve, and that you are prepared for this.</p>
 
-<p>Provide evidence that you fit the bill - not only that you meet the selection criteria but also that you've researched the course or profession and understand what studying the <a href="/courses">subject at university level</a> will involve, and that you are prepared for this.</p>
-
-<p>'Keep on topic and show that you've really done your research and know why you want to do the course.' (Sport admissions tutor)<br>
+<p>'Keep on topic and show that you’ve really done your research and know why you want to do the course.' (Sport admissions tutor)<br>
 <br>
 <strong>More useful advice:</strong></p>
 
@@ -1375,15 +1377,15 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 	<li><a href="/advice/personal-statements/personal-statements-the-student-guide-to-selling-yourself">How to 'sell yourself' in your personal statement</a></li>
 </ul>
 
-<h2>3. Say what you've done outside the classroom</h2>
+<h2>3. Say what you’ve done outside the classroom</h2>
 
-<p>If possible, outline how you've pursued your interest in your chosen subject beyond your current syllabus.</p>
+<p>If possible, outline how you’ve pursued your interest in your chosen subject beyond your current syllabus.</p>
 
-<p>For example, talk about any further reading you've done around the subject and give your critical views or reflective opinions about it. This could be from books, quality newspapers, websites, periodicals or scientific journals or from films, documentaries, blogs, radio programmes, podcasts, attending public lectures and so on.</p>
+<p>For example, talk about any further reading you’ve done around the subject and give your critical views or reflective opinions about it. This could be from books, quality newspapers, websites, periodicals or scientific journals or from films, documentaries, blogs, radio programmes, podcasts, attending public lectures and so on.</p>
 
 <p>But try to avoid mentioning the wider reading that <em>everyone</em> else is doing.</p>
 
-<p>'If I have to read about <em>Freakonomics</em> once more, I'll scream!' (Economics admissions tutor)<br>
+<p>'If I have to read about <em>Freakonomics</em> once more, I’ll scream!' (Economics admissions tutor)<br>
 <br>
 <strong>More useful advice:</strong></p>
 
@@ -1391,19 +1393,19 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 	<li><a href="/advice/personal-statements/how-to-make-your-personal-statement-stand-out-as-told-by-admissions-tutors">Make your personal statement stand out</a></li>
 </ul>
 
-<h2>4. Why it's relevant to your course...</h2>
+<h2>4. Why it’s relevant to your course...</h2>
 
-<p>Reflect on your experiences, explaining what you've learned from them or how they've helped develop your interest in the subject - it could be <a href="/advice/personal-statements/personal-statements-how-to-make-your-work-experience-really-count">work experience</a>, volunteering, a university taster session or outreach programme, summer schools, museum,  gallery or theatre visits, archaeological digs, visits to the local courts, travel, competitions or a maths challenge.</p>
+<p>Reflect on your experiences, explaining what you’ve learned from them or how they’ve helped develop your interest in the subject – it could be <a href="/advice/personal-statements/personal-statements-how-to-make-your-work-experience-really-count">work experience</a>, volunteering, a university taster session or outreach programme, summer schools, museum,  gallery or theatre visits, archaeological digs, visits to the local courts, travel, competitions or a maths challenge.</p>
 
-<p>'It doesn't have to be anything fancy!' (Archaeology admissions tutor)</p>
+<p>'It doesn’t have to be anything fancy!' (Archaeology admissions tutor)</p>
 
 <h2>5. … And relevant to your chosen career</h2>
 
-<p>Reflecting on relevant experience or observation will be essential for some professional courses where, in effect, you're applying for the career as well as the course:<br>
+<p>Reflecting on relevant experience or observation will be essential for some professional courses where, in effect, you’re applying for the career as well as the course:<br>
 <br>
-'Whatever environment you've been in, what did you spot or learn from what happens there, or what have you observed about how the qualities exhibited by professional staff helped them engage effectively with patients or service-users?' (Medicine admissions tutor)<br>
+'Whatever environment you’ve been in, what did you spot or learn from what happens there, or what have you observed about how the qualities exhibited by professional staff helped them engage effectively with patients or service-users?' (Medicine admissions tutor)<br>
 <br>
-'Reflect on your experience, don't just describe it. Talk about the skills the profession needs, how you've noticed this and how you've developed those skills yourself.' (Occupational Therapy admissions tutor)<br>
+'Reflect on your experience, don’t just describe it. Talk about the skills the profession needs, how you’ve noticed this and how you’ve developed those skills yourself.' (Occupational Therapy admissions tutor)<br>
 <br>
 <strong>More useful advice:</strong></p>
 
@@ -1413,11 +1415,11 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 
 <h2>6. Can you demonstrate transferable skills?</h2>
 
-<p>Yes you can - and admissions tutors will want to hear about them. It could be your ability for working independently, teamwork, good time management, problem-solving, leadership, listening or organisational skills.</p>
+<p>Yes you can – and admissions tutors will want to hear about them. It could be your ability for working independently, teamwork, good time management, problem-solving, leadership, listening or organisational skills.</p>
 
 <h2>7. Expand on the most relevant ones</h2>
 
-<p>But don't simply list off the skills you think you have - think about which ones relate most readily to the course you're applying to, then demonstrate how you've developed, used and improved these. Again, admissions tutors want to hear about <em>specific</em> examples, like:</p>
+<p>But don’t simply list off the skills you think you have – think about which ones relate most readily to the course you’re applying to, then demonstrate how you’ve developed, used and improved these. Again, admissions tutors want to hear about <em>specific</em> examples, like:</p>
 
 <ul>
 	<li>projects and assignments (what role did you play, what went well?)</li>
@@ -1427,25 +1429,25 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 	<li>volunteering or a part-time job (what have you observed, what extra responsibilities have you taken on, what skills have you demonstrated yourself?).</li>
 </ul>
 
-<h2>8. Show that you're a critical thinker</h2>
+<h2>8. Show that you’re a critical thinker</h2>
 
-<p>University is all about being able to think independently and analytically so being able to demonstrate that you're working like this already is a big plus point. Briefly explaining <u>how</u> one of your A-level subjects, a BTEC assignment or placement, or additional studies such as the <a href="/advice/personal-statements/epq-extended-project-qualification-personal-statement-top-tips">Extended Project Qualification (EPQ)</a> has made you think more critically could be a way of doing this.</p>
+<p>University is all about being able to think independently and analytically so being able to demonstrate that you’re working like this already is a big plus point. Briefly explaining <u>how</u> one of your A-level subjects, a BTEC assignment or placement, or additional studies such as the <a href="/advice/personal-statements/epq-extended-project-qualification-personal-statement-top-tips">Extended Project Qualification (EPQ)</a> has made you think more critically could be a way of doing this.</p>
 
-<p>'If you're taking the EPQ, do talk about it, as it's the kind of studying you'll be doing at uni.' (Modern languages admissions tutor)</p>
+<p>'If you’re taking the EPQ, do talk about it, as it’s the kind of studying you’ll be doing at uni.' (Modern languages admissions tutor)</p>
 
-<h2>9. What's the long-term plan?</h2>
+<h2>9. What’s the long-term plan?</h2>
 
-<p>Mention what your longer term goals are if you can do it in an interesting way and you've got a specific path in mind. But, if you do, then try and show a spark of individuality or imagination.</p>
+<p>Mention what your longer term goals are if you can do it in an interesting way and you’ve got a specific path in mind. But, if you do, then try and show a spark of individuality or imagination.</p>
 
-<p>'Just saying you want to be a journalist isn't exactly going to stand you out from the crowd.' (History admissions tutor)</p>
+<p>'Just saying you want to be a journalist isn’t exactly going to stand you out from the crowd.' (History admissions tutor)</p>
 
-<p>If you're not sure yet, just talk about what you're looking forward to at uni and what you want to gain from your course or from university life.</p>
+<p>If you’re not sure yet, just talk about what you’re looking forward to at uni and what you want to gain from your course or from university life.</p>
 
-<p>If you're applying for deferred entry, do mention your gap year plans if you've made a firm decision to take a year out. Most courses are <a href="/advice/ucas-application/how-do-universities-view-gap-years">happy for you to take a gap year</a> - but will want to know how you plan to spend it.</p>
+<p>If you’re applying for deferred entry, do mention your gap year plans if you’ve made a firm decision to take a year out. Most courses are <a href="/advice/ucas-application/how-do-universities-view-gap-years">happy for you to take a gap year</a> – but will want to know how you plan to spend it.</p>
 
 <h2>10. Keep it positive</h2>
 
-<p>It can be difficult to get going with your personal statement, but don't panic. Start with your strengths, focus on your enthusiasm for the course and talk positively about yourself.</p>
+<p>It can be difficult to get going with your personal statement, but don’t panic. Start with your strengths, focus on your enthusiasm for the course and talk positively about yourself.</p>
 </div><div class="advice-share full-width"><div class="advice-share__social advice-share-icons"><h3 class="heading">Share this page</h3><div class="sharing-icon-section"><div class="addanother-left"><div class="addanother addanother-classic">
       <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=&amp;p%5Btitle%5D=&amp;p%5Bsummary%5D=" class="addanother-facebook-share is-trackable" target="_blank" data-ga-action="addanother-share-click" data-ga-category="facebook" data-mobileurl="http://m.facebook.com/sharer.php?u=&amp;t=">
   <div class="addanother-service facebook icon-facebook"></div>
@@ -1494,7 +1496,7 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 </a>
 
 </div>
-</div></div></div></div><div class="advice-share__related-articles sidebar js-stick-me-please" data-sticky-offset="63" data-sticky-parent=".grid--no-gutter"><h3 class="heading">You may want to look at these...</h3><ul class="asset-group-wrapper  related-article-result__list has-3-assets has-3-internal-page-asset search-result__list" id="advice-show-side-relateds"><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos0 even first num-1-of-3 like-asset-group-pos0 like-asset-group-even like-asset-group-first like-asset-group-num-1-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2402/at_85_percent_quality_asking_question_in_lecture.jpg&#39;)"><div class="read-time">3 min read</div></div><div class="search-result__content"><h2>10 things NOT to put in your personal statement</h2><p>If you're serious about going to uni, read 10 things you should NOT put in your personal statement, and steer well clear of them.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos1 odd middle num-2-of-3 like-asset-group-pos1 like-asset-group-odd like-asset-group-middle like-asset-group-num-2-of-3 asset-source-advice-article related-article"><a href="/advice/ucas-application/the-getting-into-uni-guide"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/6042/at_85_percent_quality_main-image-tsr.jpg&#39;)"><div class="read-time">1 min read</div></div><div class="search-result__content"><h2>The Getting Into Uni Guide [Download]</h2><p>We&#39;ve teamed up with The Student Room to create a free, comprehensive guide to getting into university, covering everything from research to applying, finance to freshers&#39; week survival.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos2 even last final num-3-of-3 like-asset-group-pos2 like-asset-group-even like-asset-group-last like-asset-group-final like-asset-group-num-3-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/5514/at_85_percent_quality_iStock_000042644082_Large-article.jpg&#39;)"><div class="read-time">4 min read</div></div><div class="search-result__content"><h2>10 more things to put in your personal statement </h2><p>Our first top 10 of what to include in your personal statement article was so popular that we've got 10 more things to tick off as part of your application.</p></div></a></li></ul></div></div></div></div><div class="advice-article__related"><div class="search-results"><div class="grid--gutter"><h2>Related to this article</h2><ul class="asset-group-wrapper related-article-result__list js-carousel-me-with-defaults-please has-3-assets has-3-internal-page-asset search-result__list" id="advice-show-related"><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos0 even first num-1-of-3 like-asset-group-pos0 like-asset-group-even like-asset-group-first like-asset-group-num-1-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2402/at_85_percent_quality_asking_question_in_lecture.jpg&#39;)"><div class="read-time">3 min read</div></div><div class="search-result__content"><h2>10 things NOT to put in your personal statement</h2><p>If you're serious about going to uni, read 10 things you should NOT put in your personal statement, and steer well clear of them.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos1 odd middle num-2-of-3 like-asset-group-pos1 like-asset-group-odd like-asset-group-middle like-asset-group-num-2-of-3 asset-source-advice-article related-article"><a href="/advice/ucas-application/the-getting-into-uni-guide"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/6042/at_85_percent_quality_main-image-tsr.jpg&#39;)"><div class="read-time">1 min read</div></div><div class="search-result__content"><h2>The Getting Into Uni Guide [Download]</h2><p>We&#39;ve teamed up with The Student Room to create a free, comprehensive guide to getting into university, covering everything from research to applying, finance to freshers&#39; week survival.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos2 even last final num-3-of-3 like-asset-group-pos2 like-asset-group-even like-asset-group-last like-asset-group-final like-asset-group-num-3-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/5514/at_85_percent_quality_iStock_000042644082_Large-article.jpg&#39;)"><div class="read-time">4 min read</div></div><div class="search-result__content"><h2>10 more things to put in your personal statement </h2><p>Our first top 10 of what to include in your personal statement article was so popular that we've got 10 more things to tick off as part of your application.</p></div></a></li></ul></div></div></div><div class="advice-article__search-which"><div class="grid--no-gutter"><h2>Search Which? University</h2><h3>Find further advice or search for information on a course or university</h3><ul class="tabs" data-tab=""><li class="tab-item active"><a href="#advice-search">Search Advice</a></li><li class="tab-item"><a href="#course-or-university-search">Search courses &/or universities</a></li></ul><div class="tabs-content"><div class="content active" id="advice-search"><form class="form_search formtastic a" novalidate="novalidate" action="/search/advice" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+</div></div></div></div><div class="advice-share__related-articles sidebar js-stick-me-please" data-sticky-offset="63" data-sticky-parent=".grid--no-gutter"><h3 class="heading">You may want to look at these...</h3><ul class="asset-group-wrapper  related-article-result__list has-3-assets has-3-internal-page-asset search-result__list" id="advice-show-side-relateds"><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos0 even first num-1-of-3 like-asset-group-pos0 like-asset-group-even like-asset-group-first like-asset-group-num-1-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2402/at_85_percent_quality_asking_question_in_lecture.jpg&#39;)"><div class="read-time">3 min read</div></div><div class="search-result__content"><h2>10 things NOT to put in your personal statement</h2><p>If you’re serious about going to uni, read 10 things you should NOT put in your personal statement, and steer well clear of them.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos1 odd middle num-2-of-3 like-asset-group-pos1 like-asset-group-odd like-asset-group-middle like-asset-group-num-2-of-3 asset-source-advice-article related-article"><a href="/advice/ucas-application/the-getting-into-uni-guide"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/6042/at_85_percent_quality_main-image-tsr.jpg&#39;)"><div class="read-time">1 min read</div></div><div class="search-result__content"><h2>The Getting Into Uni Guide [Download]</h2><p>We&#39;ve teamed up with The Student Room to create a free, comprehensive guide to getting into university, covering everything from research to applying, finance to freshers&#39; week survival.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos2 even last final num-3-of-3 like-asset-group-pos2 like-asset-group-even like-asset-group-last like-asset-group-final like-asset-group-num-3-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/5514/at_85_percent_quality_iStock_000042644082_Large-article.jpg&#39;)"><div class="read-time">4 min read</div></div><div class="search-result__content"><h2>10 more things to put in your personal statement </h2><p>Our first top 10 of what to include in your personal statement article was so popular that we’ve got 10 more things to tick off as part of your application.</p></div></a></li></ul></div></div></div></div><div class="advice-article__related"><div class="search-results"><div class="grid--gutter"><h2>Related to this article</h2><ul class="asset-group-wrapper related-article-result__list js-carousel-me-with-defaults-please has-3-assets has-3-internal-page-asset search-result__list" id="advice-show-related"><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos0 even first num-1-of-3 like-asset-group-pos0 like-asset-group-even like-asset-group-first like-asset-group-num-1-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/10-things-not-to-put-in-your-personal-statement"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/2402/at_85_percent_quality_asking_question_in_lecture.jpg&#39;)"><div class="read-time">3 min read</div></div><div class="search-result__content"><h2>10 things NOT to put in your personal statement</h2><p>If you’re serious about going to uni, read 10 things you should NOT put in your personal statement, and steer well clear of them.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos1 odd middle num-2-of-3 like-asset-group-pos1 like-asset-group-odd like-asset-group-middle like-asset-group-num-2-of-3 asset-source-advice-article related-article"><a href="/advice/ucas-application/the-getting-into-uni-guide"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/6042/at_85_percent_quality_main-image-tsr.jpg&#39;)"><div class="read-time">1 min read</div></div><div class="search-result__content"><h2>The Getting Into Uni Guide [Download]</h2><p>We&#39;ve teamed up with The Student Room to create a free, comprehensive guide to getting into university, covering everything from research to applying, finance to freshers&#39; week survival.</p></div></a></li><li class="search-result__item internal-page-asset has-title has-image has-intro-text pos2 even last final num-3-of-3 like-asset-group-pos2 like-asset-group-even like-asset-group-last like-asset-group-final like-asset-group-num-3-of-3 asset-source-advice-article related-article"><a href="/advice/personal-statements/your-ucas-personal-statement-10-more-things-to-put-in"><div class="search-result__image" style="background-image: url(&#39;//dtmw9u23bb9ya.cloudfront.net/uploads/image/file/5514/at_85_percent_quality_iStock_000042644082_Large-article.jpg&#39;)"><div class="read-time">4 min read</div></div><div class="search-result__content"><h2>10 more things to put in your personal statement </h2><p>Our first top 10 of what to include in your personal statement article was so popular that we’ve got 10 more things to tick off as part of your application.</p></div></a></li></ul></div></div></div><div class="advice-article__search-which"><div class="grid--no-gutter"><h2>Search Which? University</h2><h3>Find further advice or search for information on a course or university</h3><ul class="tabs" data-tab=""><li class="tab-item active"><a href="#advice-search">Search Advice</a></li><li class="tab-item"><a href="#course-or-university-search">Search courses &/or universities</a></li></ul><div class="tabs-content"><div class="content active" id="advice-search"><form class="form_search formtastic a" novalidate="novalidate" action="/search/advice" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
 <fieldset class="advice-category-article-search-box search--input">
 
   <!-- Preamble -->
@@ -1542,7 +1544,7 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
   <div class="search-box-postamble">
         </div>
 </fieldset>
-</form></div></div></div></div><div class="newsletter-section"><div class="grid"><div class="newsletter-section--body"><h3 class="center">We'll keep you updated with alerts, news and help where you need it.</h3><div class="newsletter-section--sign-up"><div class="newsletter-btn half"><div class="btn__red"><a href="/about/sign-up-for-updates">Newsletter sign up</a><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/icon-arrow-right-d39654da7ca3e03a8bfd7ea1a2d4a9f1.png" alt="Icon arrow right" /></div></div><div class="follow-us advice-share-icons"><p class="caps">Follow us:</p><div class="follow-us--icon"><div class="icon icon-facebook"></div></div><div class="follow-us--icon"><div class="icon icon-twitter"></div></div><div class="follow-us--icon"><div class="icon icon-google"></div></div><div class="follow-us--icon"><div class="icon icon-youtube"></div></div></div></div></div></div></div></div>
+</form></div></div></div></div><div class="newsletter-section"><div class="grid"><div class="newsletter-section--body"><h3 class="center">We'll keep you updated with alerts, news and help where you need it.</h3><div class="newsletter-section--sign-up"><div class="newsletter-btn half"><div class="btn__red"><a href="/about/sign-up-for-updates">Newsletter sign up</a><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/icon-arrow-right-51deddb7c4df75df48ae65dea930b526.png" alt="Icon arrow right" /></div></div><div class="follow-us advice-share-icons"><p class="caps">Follow us:</p><div class="follow-us--icon"><div class="icon icon-facebook"></div></div><div class="follow-us--icon"><div class="icon icon-twitter"></div></div><div class="follow-us--icon"><div class="icon icon-google"></div></div><div class="follow-us--icon"><div class="icon icon-youtube"></div></div></div></div></div></div></div></div>
 
     </div>
   </main>
@@ -1602,19 +1604,19 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
       </div>
       <div class="grid--4of12 footer--partners">
         <h5>Our partners</h5>
-        <a href="http://www.nus.org.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/nus-126bb66d7b509c5b5f92a3cb7c98965c.png" alt="Nus" /></a>
+        <a href="http://www.nus.org.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/nus-bbf2b898c37bb09a5738006bd06353a0.png" alt="Nus" /></a>
         <p>The National Union of Students (NUS) supports Which? University as an independent source of information and advice for anyone considering higher education. We&#39;re working with NUS to bring you exclusive insights from student unions in universities and colleges across the UK.</p>
       </div>
       <div class="grid--4of12 footer--work">
         <h5>Who we work with</h5>
           <ul class="logos--left">
-            <li><a href="http://www.ucas.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/ucas-d6791034b683d15e63fcd6950adaac52.png" alt="Ucas" /></a></li>
-            <li><a href="http://www.hesa.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/hesa-114814d1733dab60eed91afa2cb0ea18.png" alt="Hesa" /></a></li>
-            <li><a href="http://www.heloa.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/heloa-4b744da659b04a871549b8d0b036f6c4.png" alt="Heloa" /></a></li>
+            <li><a href="http://www.ucas.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/ucas-a4fc5130e5260982a967e48b5f1fc428.png" alt="Ucas" /></a></li>
+            <li><a href="http://www.hesa.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/hesa-e1e23bc32e4de010a73053d183b6f0fe.png" alt="Hesa" /></a></li>
+            <li><a href="http://www.heloa.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/heloa-6045bcc69c87a76174f306a8464e78ec.png" alt="Heloa" /></a></li>
           </ul>
           <ul class="logos--right">
-            <li><a href="http://www.hecsu.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/hecsu-25191bd7e47e7fb4b61a07a5df16bf4e.png" alt="Hecsu" /></a></li>
-            <li><a href="http://www.youthsight.com/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/youthsight-fa4438b3f1dc799b788499110bdf5fad.png" alt="Youthsight" /></a></li>
+            <li><a href="http://www.hecsu.ac.uk/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/hecsu-0089ffdea977e74ab5095de0f815786d.png" alt="Hecsu" /></a></li>
+            <li><a href="http://www.youthsight.com/"><img src="http://dtmw9u23bb9ya.cloudfront.net/assets/logos/youthsight-1eb59853edf8350b014cabdd4dc70f40.png" alt="Youthsight" /></a></li>
           </ul>
       </div>
     </div>
@@ -1651,6 +1653,13 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 </footer>
 
 
+
+
+  <script>
+  $(document).ready(function () {
+    
+  });
+  </script>
   <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");
 var b=document.getElementsByTagName("script")[0];

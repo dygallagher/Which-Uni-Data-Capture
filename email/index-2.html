@@ -74,7 +74,7 @@
 			letter-spacing:normal;
 			margin-top:0;
 			margin-right:0;
-			margin-bottom:1m;
+			margin-bottom:1em;
 			margin-left:0;
 			text-align:left;
 		}
@@ -148,6 +148,11 @@
 				display: none;
 			}
 		}
+		@media only screen and (min-device-width: 601px) {
+		  #templateContainer {
+		    width: 600px !important;
+		  }
+		}
 		</style>
 	</head>
 	
@@ -158,25 +163,36 @@
 				
 				<tr>
 					<td>
+						<!--[if (gte mso 9)|(IE)]>
+						  <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						    <tr>
+						      <td>
+						<![endif]-->
+
+						<!--[if IE]>
+						  <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+						    <tr>
+						      <td>
+						<![endif]-->
 						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" id="templateContainer" style="width:100%; max-width:600px; background:#fff;margin-bottom: 100px;">
 							
 							<tr>
 								<td>
 
-									<table id="preheader"  border="0" cellpadding="20" cellspacing="0" width="100%" >
+									<table id="preheader"  border="0" cellpadding="20" cellspacing="0" width="100%" style="text-align:center; background-color:#eee;">
 										<tr>
-											<td>Free guides and tips are on their way!</td>
+											<td style="text-align:center; background-color:#eee;">Free guides and tips are on their way!</td>
 										</tr>
 									</table>
 
 									<table id="header"  border="0" cellpadding="0" cellspacing="0" width="100%" >
 										<tr>
 											<td style="padding:20px;"><a href="http://university.which.co.uk/"><img align="left" src="http://dtmw9u23bb9ya.cloudfront.net/assets/WhichLogo2Uni-bda7ebdb6627c359e22834746e7d3b36.png" alt="Which? University logo" /></a></td>
-											<td style="padding:9px 20px 0 0px; line-height: 1.75em;" id="nav"><a href="http://university.which.co.uk/courses">Find a course</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://university.which.co.uk/search/institution">University profiles</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://university.which.co.uk/advice">Get advice</a></td>
+											<td style="padding:9px 20px 0 0px; line-height: 1.75em;color:#ccc;" id="nav"><a href="http://university.which.co.uk/courses" style="color:#3a73af;font-weight:normal;text-decoration:none;">Find a course</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://university.which.co.uk/search/institution" style="color:#3a73af;font-weight:normal;text-decoration:none;">University profiles</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://university.which.co.uk/advice" style="color:#3a73af;font-weight:normal;text-decoration:none;">Get advice</a></td>
 										</tr>
 										<tr>
-											<td colspan="2"><img src="_img/uni-header.jpg" alt=" " style="width:100%; max-width:600px;" /></td>
+											<td colspan="2"><img src="http://betenoir.net/which/uni/email/_img/uni-header.jpg" alt=" " style="width:100%; max-width:600px;" /></td>
 										</tr>
 									</table><!-- #header -->
 
@@ -184,72 +200,72 @@
 										<tr>
 											<td style="padding:20px">
 
-												<h2>Welcome to Which? University</h2>
+												<h2 style="color:#05171d !important;display:block;font-family: Tahoma,Geneva,sans-serif;font-size:36px;font-style:normal;font-weight:bold;line-height:48px;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1em;margin-left:0;text-align:left;">Welcome to Which? University</h2>
 
-												<p><b>Hi ||firstname||,</b></p>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;"><b>Hi ||firstname||,</b></p>
 
-												<p>Thank you for signing up to our Which? University ||uni-category|| emails.</p>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">Thank you for signing up to our Which? University ||uni-category|| emails.</p>
 
-												<p>We'll email you at timely points during the year to help prepare you for key Ucas dates and deadlines and share expert advice on topics such as personal statements, student finance and how to choose the right course - all delivered to your inbox, when you need it.</p>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">We'll email you at timely points during the year to help prepare you for key Ucas dates and deadlines and share expert advice on topics such as personal statements, student finance and how to choose the right course - all delivered to your inbox, when you need it.</p>
 												
-												<p>In the meantime, we hope you enjoy the site - <a href="http://www.which.co.uk/university">www.which.co.uk/university</a></p><br>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">In the meantime, we hope you enjoy the site - <a href="http://www.which.co.uk/university">www.which.co.uk/university</a></p><br>
 
-												<p><b>The Which? University team</b></p>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;"><b>The Which? University team</b></p>
 
 											</td>
 										</tr>
 										<tr>
-											<td style="height:25px; background:url(_img/bg-angle-eee.png) no-repeat left;"></td>
+											<td style="height:58px; background:url(http://betenoir.net/which/uni/email/_img/bg-angle-eee.png) no-repeat left;"></td>
 										</tr>
 									</table><!-- #main -->
 
 									<table id="social" border="0" cellpadding="10" cellspacing="0" align="center">
 										<tr>
-											<td colspan="3" id="social-head" style="padding-top:30px;">Follow us for news and updates</td>
+											<td colspan="3" id="social-head" style="padding-top:30px;color:#616161 !important;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-left:0;text-align:center;text-transform: uppercase;border-bottom: 1px solid #ccc;">Follow us for news and updates</td>
 										</tr>
 										<tr>
-											<td><a href="https://www.facebook.com/WhichUniversity/"><img src="_img/i-facebook.png"></a></td>
-											<td><a href="https://twitter.com/WhichuniUK"><img src="_img/i-twitter.png"></a></td>
-											<td><a href="https://www.youtube.com/channel/UCE4wTl717NEgaY-nyHVE6dw"><img src="_img/i-youtube.png"></a></td>
+											<td style="text-align: center;"><a href="https://www.facebook.com/WhichUniversity/"><img src="http://betenoir.net/which/uni/email/_img/i-facebook.png"></a></td>
+											<td style="text-align: center;"><a href="https://twitter.com/WhichuniUK"><img src="http://betenoir.net/which/uni/email/_img/i-twitter.png"></a></td>
+											<td style="text-align: center;"><a href="https://www.youtube.com/channel/UCE4wTl717NEgaY-nyHVE6dw"><img src="http://betenoir.net/which/uni/email/_img/i-youtube.png"></a></td>
 										</tr>
 									</table><!-- #social -->
 
 									<table id="main-2" border="0" cellpadding="0" cellspacing="0" width="100%" >
 										<tr>
-											<td style="height:96px; background:url(_img/bg-angle-left-eee.png) no-repeat left;"></td>
+											<td style="height:96px; background:url(http://betenoir.net/which/uni/email/_img/bg-angle-left-eee.png) no-repeat left;"></td>
 										</tr>
 										<tr>
 											<td style="padding:20px">
 
-												<h2>Tools and resources for you</h2>
+												<h2 style="color:#05171d !important;display:block;font-family: Tahoma,Geneva,sans-serif;font-size:36px;font-style:normal;font-weight:bold;line-height:48px;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1em;margin-left:0;text-align:left;">Tools and resources for you</h2>
 
-												<h3><a href="http://university.which.co.uk/search/course?utf8=%E2%9C%93">Find a degree course</a></h3>
-												<p>Personalise your uni search by the things important to you, including predicted grades and location.</p>
+												<h3 style="font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;margin:0 0 16px 0;"><a href="http://university.which.co.uk/search/course?utf8=%E2%9C%93" style="color:#3a73af !important;font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;text-decoration:none;">Find a degree course</a></h3>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">Personalise your uni search by the things important to you, including predicted grades and location.</p>
 
-												<h3><a href="http://university.which.co.uk/search/institution">Explore university profiles</a></h3>
-												<p>We've got thousands of student reviews, delving into what life at different unis is really like...</p>
+												<h3 style="font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;margin:0 0 16px 0;"><a href="http://university.which.co.uk/search/institution" style="color:#3a73af !important;font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;text-decoration:none;">Explore university profiles</a></h3>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">We've got thousands of student reviews, delving into what life at different unis is really like...</p>
 
-												<h3><a href="http://university.which.co.uk/courses">Degree subject guides</a></h3>
-												<p>Not sure what you want to study yet? From accounting to zoology, start exploring your degree options here.</p>
+												<h3 style="font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;margin:0 0 16px 0;"><a href="http://university.which.co.uk/courses" style="color:#3a73af !important;font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;text-decoration:none;">Degree subject guides</a></h3>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">Not sure what you want to study yet? From accounting to zoology, start exploring your degree options here.</p>
 
-												<h3><a href="http://university.which.co.uk/advice">Expert advice</a></h3>
-												<p>Help for every step on your journey to university, from GCSE results and A-level choices to what to pack.</p>
+												<h3 style="font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;margin:0 0 16px 0;"><a href="http://university.which.co.uk/advice" style="color:#3a73af !important;font-family: Tahoma,Geneva,sans-serif;font-size:25px;font-weight:normal;line-height:36px;letter-spacing:normal;text-decoration:none;">Expert advice</a></h3>
+												<p style="color:#616161 !important;display:block;font-family:Helvetica;font-size:16px;font-weight:normal;line-height:1.4em;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:1.4em;margin-left:0;text-align:left;">Help for every step on your journey to university, from GCSE results and A-level choices to what to pack.</p>
 
 											</td>
 										</tr>
 										<tr>
-											<td style="height:70px; background:url(_img/bg-angle-eee.png) no-repeat left;"></td>
+											<td style="height:70px; background:url(http://betenoir.net/which/uni/email/_img/bg-angle-eee.png) no-repeat left;"></td>
 										</tr>
 									</table><!-- #main -->
 
 									<table id="footer" border="0" cellpadding="10" cellspacing="0" align="center">
 										<tr>
 											<td style="padding:20px;">
-												<p style="font-size:14px; padding-top:20px;"><b>Received this newsletter from someone else?</b> <a style="font-size:14px;" href="http://university.which.co.uk/about/sign-up-for-updates">Sign up to receive our free guides and tips</a> straight to your inbox.</p>
+												<p style="font-size:14px; padding-top:20px;font-family:Helvetica;margin:0 0 1em 0;"><b>Received this newsletter from someone else?</b> <a style="font-size:14px;" href="http://university.which.co.uk/about/sign-up-for-updates">Sign up to receive our free guides and tips</a> straight to your inbox.</p>
 
-												<p style="font-size:14px;">If you do not want to receive further updates from Which?, <a href="">unsubscribe</a> from emails. <a style="font-size:14px;" href="http://university.which.co.uk/about/privacy-policy">View our privacy policy</a>.</p>
+												<p style="font-size:14px;font-family:Helvetica;margin:0 0 1em 0;">If you do not want to receive further updates from Which?, <a href="https://cai-whichcouk.bsd.net/page/unsubscribe/">unsubscribe</a> from emails. <a style="font-size:14px;" href="http://university.which.co.uk/about/privacy-policy">View our privacy policy</a>.</p>
 												
-												<p style="border-top:1px solid #ccc; padding-top:30px; color: #757575 !important; font-size:14px;">Which? Ltd. Reg in England No 677665. Reg office 2 Marylebone Road, London NW1 4DF. Reg under the Data Protection Act. Members of the DMA. © 2015 Which? All Rights Reserved</p>
+												<p style="border-top:1px solid #ccc; padding-top:30px; color: #757575 !important; font-size:14px;font-family:Helvetica;margin:0 0 1em 0;">Which? Ltd. Reg in England No 677665. Reg office 2 Marylebone Road, London NW1 4DF. Reg under the Data Protection Act. Members of the DMA. © 2015 Which? All Rights Reserved</p>
 
 											</td>
 										</tr>
@@ -258,6 +274,18 @@
 							</tr>
 
 						</table><!-- #templateContainer -->
+
+						<!--[if IE]>
+						      </td>
+						    </tr>
+						  </table>
+						<![endif]-->
+
+						<!--[if (gte mso 9)|(IE)]>
+						      </td>
+						    </tr>
+						  </table>
+						<![endif]-->
 
 					</td>
 				</tr>

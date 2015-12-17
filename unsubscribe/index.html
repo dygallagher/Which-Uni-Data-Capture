@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
-<title>Unsubscribe - Which?</title>
+<title>Which? University</title>
 <meta name="description" content="Unsubscribe from receiving emails from Which? university">
 <meta name="author" content="Which?">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,9 @@ body, html {
   color: #05171d;
   font-family: "Open Sans", sans-serif;
 }
+#bsd-stuff {
+  display: none;
+}
 #unsub-container {
   width: 100%;
   background-color: #fff;
@@ -33,7 +36,7 @@ body, html {
   border: 1px solid #e0e0e0;
   position: relative;
   max-width: 615px;
-  margin-top:20vh;
+  margin-top:10vh;
   padding:30px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -63,7 +66,7 @@ p {
   text-decoration: underline;
   color: #6177bf;
 }
-input[type="email"] {
+input[type="email"],input[type="text"],input[type="tel"] {
   height: 48px !important;
   font-family: "Open Sans", sans-serif;
   padding-left: 18px;
@@ -100,7 +103,7 @@ label {
   font-size: 16px;
   padding-bottom: 5px;
 }
-button {
+button, input[type="submit"] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -117,7 +120,7 @@ button {
   padding: 0 30px;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   background: #b71c1c;
   cursor: pointer;
 }
@@ -160,6 +163,10 @@ form .frm-err-lbl {
     margin-top: 0;
   }
 }
+#signup .input label {
+  padding-left: 28px;
+  margin-top: -18px;
+}
 </style>
 
 </head>
@@ -167,38 +174,12 @@ form .frm-err-lbl {
 
   <div id="unsub-container">
 
-    <div id="logo"><a href="http://university.which.co.uk/"><img src="https://s.bsd.net/whichcouk/cai/page/-/Uni%20Data%20Capture/WhichLogo2Uni.png" width="203" height="58" alt="" /></a></div>
-
-    <h1>Unsubscribe</h1>
-
-    <h2>We're really sorry to lose you.</h2>
-
-    <p>Please fill out the form below and we'll remove you from our email list. Remember you can remain on our email list even if you're not a Which? member.</p>
-
-    <p>Alternatively, you can <a href="https://whichcouk.bsd.net/page/s/rj-fewer-emails">opt to receive fewer emails</a>.</p>
-
-    <form action="https://cai-whichcouk.bsd.net/page/unsubscribe/" method="post" name="unsub_form" id="unsub_form">
-
-      <div class="frm-row email">
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email">
-      </div>
-
-      <div class="frm-row reason">
-          <label for="reason">Tell us why you're unsubscribing <strong>(optional)</label>
-          <textarea cols="42" rows="6" name="reason"></textarea>
-      </div>
-
-      <div class="submit">
-          <button type="submit" id="udc-2-btn-1">Unsubscribe me</button>
-      </div>
-
-    </form>
+    <div id="logo"><a href="http://which.co.uk/"><img src="https://s.bsd.net/whichcouk/cai/page/-/Uni%20Data%20Capture/logo-which.png" alt="Which?"/></a></div>
 
     <div id="bsd-stuff">
     <!-- \/\/\/\/\/ START BSD \/\/\/\/\/\/ -->
 
-    <!-- <h1>We're really sorry to lose you.</h1>Thank you for supporting our campaigns at Which? Please fill <br>
+    <h1>We're really sorry to lose you.</h1>Thank you for supporting our campaigns at Which? Please fill <br>
     out the form below and we'll remove you from our email list. <br>
     <br>
     <a href="https://whichcouk.bsd.net/page/s/rj-fewer-emails" style="font-weight:bold; color:#0008AB;">If you would rather receive fewer emails instead of <br>
@@ -224,7 +205,7 @@ form .frm-err-lbl {
 
     </table>
     </div>
-    </form><div id="fb-root"></div> -->
+    </form><div id="fb-root"></div>
 
     <!-- \/\/\/\/\/ END BSD \/\/\/\/\/\/ -->
     </div><!-- bsd-stuff -->
@@ -246,35 +227,49 @@ form .frm-err-lbl {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script type="text/javascript">
+  
   function isValidEmailAddress(emailAddress) {
       var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
       return pattern.test(emailAddress);
   };
 
   $(document).ready(function() {
-      $("#unsub_form").submit(function(e) {
-        e.preventDefault();
 
-        /* Validation */
-        var valid = 1;
-        var emailaddress = $('#email').val();
-
-        $('.error').removeClass('error');
-        $('.frm-err-lbl').hide();
-
-        if( !isValidEmailAddress( emailaddress ) ) { 
-          var valid = 0;
-          $('input#email').after('<div class="frm-err-lbl">Please enter a valid email address</div>');
-          $('.email').addClass('error');
-        }
-
-        if( valid == 1 ) {
-
-            alert("This form is valid!");
-
-        }
+      // Run this only if we're not on the confirm page
+      if(window.location.href.indexOf("/unsubscribe/") > -1) {
+    
+        $('#bsd-stuff').html('<h1>Unsubscribe</h1> <h2>We\'re really sorry to lose you.</h2> <p>Please fill out the form below and we\'ll remove you from our Which? University email list. Remember you can remain on our email list even if you\'re not a Which? member.</p><p>Alternatively, you can <a href="https://whichcouk.bsd.net/page/s/rj-fewer-emails"><strong>opt to receive fewer emails</strong></a>.</p><form action="https://cai-whichcouk.bsd.net/page/unsubscribe/" method="post" name="unsub_form_2" id="unsub_form_2"> <div class="frm-row email"> <label for="email">Email address</label> <input type="email" id="email" name="email"> </div><div class="frm-row reason"> <label for="reason">Tell us why you\'re unsubscribing <strong>(optional)</label> <textarea cols="42" rows="6" name="reason"></textarea> </div><div class="submit"> <button type="submit" id="udc-2-btn-1">Unsubscribe me</button> </div></form>').show();
         
-    }); 
+        $('#udc-2-btn-1').click(function(e) {
+          e.preventDefault();
+
+          /* Validation */
+          var valid = 1;
+          var emailaddress = $('#email').val();
+
+          $('.error').removeClass('error');
+          $('.frm-err-lbl').hide();
+
+          if( !isValidEmailAddress( emailaddress ) ) { 
+            var valid = 0;
+            $('input#email').after('<div class="frm-err-lbl">Please enter a valid email address</div>');
+            $('.email').addClass('error');
+          }
+
+          if( valid == 1 ) {
+
+              $('#unsub_form_2').submit();
+
+          }
+          
+        });          
+
+      } // end the if
+
+      else {
+        $('#bsd-stuff').show();
+      }
+
   });
 </script>
 

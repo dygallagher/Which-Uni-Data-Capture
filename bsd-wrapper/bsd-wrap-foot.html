@@ -1,0 +1,67 @@
+    </div><!-- bsd-stuff -->
+
+  </div>
+
+  <div id="links">
+
+    <ul>
+
+      <li><a href="http://university.which.co.uk/">Which? University</a></li>
+      <li><a href="http://university.which.co.uk/about/privacy-policy">Privacy policy</a></li>
+      <li><a href="http://university.which.co.uk/about/cookie-policy">Cookie policy</a></li>
+      <!-- <li><a href="http://university.which.co.uk/about/terms-and-conditions">Terms and conditions</a></li> -->
+    </ul>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+  
+  function isValidEmailAddress(emailAddress) {
+      var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+      return pattern.test(emailAddress);
+  };
+
+  $(document).ready(function() {
+
+      // Run this only if we're not on the confirm page
+      if(window.location.href.indexOf("/unsubscribe/") > -1) {
+    
+        $('#bsd-stuff').html('<h1>Unsubscribe</h1> <h2>We\'re really sorry to lose you.</h2> <p>Please fill out the form below and we\'ll remove you from our Which? University email list. Remember you can remain on our email list even if you\'re not a Which? member.</p><p>Alternatively, you can <a href="https://cai-whichcouk.bsd.net/page/s/manage-email-preferences-for-which-university"><strong>opt to receive fewer emails</strong></a>.</p><form action="https://cai-whichcouk.bsd.net/page/unsubscribe/" method="post" name="unsub_form_2" id="unsub_form_2"> <div class="frm-row email"> <label for="email">Email address</label> <input type="email" id="email" name="email"> </div><div class="frm-row reason"> <label for="reason">Tell us why you\'re unsubscribing <strong>(optional)</label> <textarea cols="42" rows="6" name="reason"></textarea> </div><div class="submit"> <button type="submit" id="udc-2-btn-1">Unsubscribe me</button> </div></form>').show();
+        
+        $('#udc-2-btn-1').click(function(e) {
+          e.preventDefault();
+
+          /* Validation */
+          var valid = 1;
+          var emailaddress = $('#email').val();
+
+          $('.error').removeClass('error');
+          $('.frm-err-lbl').hide();
+
+          if( !isValidEmailAddress( emailaddress ) ) { 
+            var valid = 0;
+            $('input#email').after('<div class="frm-err-lbl">Please enter a valid email address</div>');
+            $('.email').addClass('error');
+          }
+
+          if( valid == 1 ) {
+
+              $('#unsub_form_2').submit();
+
+          }
+          
+        });          
+
+      } // end the if
+
+      else {
+        $('#bsd-stuff').show();
+      }
+
+  });
+</script>
+
+</body>
+</html>

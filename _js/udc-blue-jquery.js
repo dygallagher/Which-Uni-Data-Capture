@@ -49,9 +49,8 @@ function main() {
         $('#custom-3634').change(function() {
             $('#step-2').slideDown();
             $('html, body').animate({
-                scrollTop: $("#right").offset().top
+                scrollTop: $("#right").offset().top - 30
             }, 1000);
-            $('#udc-btn-1').removeClass('disbld').removeAttr('disabled')
         });
 
         $('#btn-close, .lnk-close').click(function(event) {

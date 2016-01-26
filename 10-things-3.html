@@ -1381,6 +1381,9 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
 
    <div id="udc-container">
   <style type="text/css" scoped>
+  	#step-2 {
+  		display: none;
+  	}
     .cf:before,
     .cf:after {
       content: " ";
@@ -1455,7 +1458,7 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
           margin-left: 0;
         }#udc-card #right{
           float: none !important;
-          width: 40%;
+          width: 100% !important;
           padding:0 20px;
           border-left:1px solid #e0e0e0;
           box-sizing: border-box;
@@ -1558,8 +1561,8 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
     }#btn-close, #btn-reload{
       max-width: 300px;
       margin: 24px 0 18px 0;
-    }.disabled{
-      background-color: #e0e0e0 !important;
+    }.disbld {
+      background-color: #9e9e9e !important;
       transition-property: background-color, color;
       transition-duration: 200ms;
       transition-timing-function: ease-in-out;
@@ -1641,7 +1644,11 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
               
               <select id="custom-3634" name="custom-3634" >
                 
-                <option value="Student" selected>
+                <option  selected="true" disabled="disabled">
+                  Please select
+                </option>
+                
+                <option value="Student">
                   Student
                 </option>
                 
@@ -1656,7 +1663,10 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
               </select>
               
             </div>
-            <div class="udc-frm-row fname">
+
+            <div id="step-2">
+
+            <div class="udc-frm-row fname ">
               
               <label for="firstname">
                 First name
@@ -1665,7 +1675,7 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
               <input type="text" id="firstname" name="firstname">
               
             </div>
-            <div class="udc-frm-row lname">
+            <div class="udc-frm-row lname ">
               
               <label for="lastname">
                 Last name
@@ -1674,7 +1684,7 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
               <input type="text" id="lastname" name="lastname">
               
             </div>
-            <div class="udc-frm-row email">
+            <div class="udc-frm-row email ">
               
               <label for="email">
                 Email address
@@ -1683,7 +1693,7 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
               <input type="email" id="email" name="email">
               
             </div>
-            <div class="udc-frm-row">
+            <div class="udc-frm-row ">
               
               <small>
                 In pressing the button below you agree that we can keep you informed by email about Which? University and other products and services from the Which? Group. Your data will be processed in accordance with our 
@@ -1694,9 +1704,12 @@ Avoid the <a href="/advice/personal-statements/10-things-not-to-put-in-your-pers
               </small>
               
             </div>
+
+            </div><!-- #step-w -->
+
             <div class="udc-frm-row">
               
-              <button type="submit" id="udc-btn-1">
+              <button type="submit" id="udc-btn-1" class="disbld" disabled>
                 Sign me up
               </button>
               

@@ -46,6 +46,14 @@ function main() {
 
         $('h2:nth-of-type(4)').before('');
 
+        $('#custom-3634').change(function() {
+            $('#step-2').slideDown();
+            $('html, body').animate({
+                scrollTop: $("#right").offset().top
+            }, 1000);
+            $('#udc-btn-1').removeClass('disbld').removeAttr('disabled')
+        });
+
         $('#btn-close, .lnk-close').click(function(event) {
             event.preventDefault();
             $('#udc-container').fadeOut('slow');
